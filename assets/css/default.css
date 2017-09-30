@@ -111,7 +111,8 @@ html, body, #main {
     height: 100%;
     width: 100%;
     position: relative;
-    display: inline-block; }
+    display: inline-block;
+    white-space: normal; }
 
 .footer {
   text-align: center; }

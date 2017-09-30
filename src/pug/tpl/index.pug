@@ -1,0 +1,236 @@
+extends page
+
+block main
+  #main
+    .header
+      .title
+        block header-title
+    .slideshow-wrapper
+      .slideshow
+        .slide(data-slide-id='1')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s1-title
+            .row
+              .col-md-12
+                .subtitle
+                  block s1-authors
+            .row
+              .col-md-12
+                block s1-text
+            .row
+              .col-md-12
+                a.btn.btn-default(href='#2')
+                  block s1-start
+        .slide(data-slide-id='2')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s2-title
+            .row
+              .col-md-12
+                block s2-text
+        .slide(data-slide-id='3')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s3-title
+            .row
+              .col-md-4
+                block s3-caption-1
+              .col-md-4
+                block s3-caption-2
+              .col-md-4
+                block s3-text
+        .slide(data-slide-id='4')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s4-title
+            .row
+              .col-md-4.col-md-push-8
+                .switch-panel
+                  .title
+                    block s4-switch-title
+                  ul.options
+                    li
+                      button(data-option='1')
+                        block s4-switch-option-1
+                    li
+                      button(data-option='2')
+                        block s4-switch-option-2
+                    li
+                      button(data-option='3')
+                        block s4-switch-option-3
+                    li
+                      button(data-option='4')
+                        block s4-switch-option-4
+                .panel
+                  .switch-display(data-option-show='1')
+                    block s4-switch-text-1
+                  .switch-display(data-option-show='2')
+                    block s4-switch-text-2
+                  .switch-display(data-option-show='3')
+                    block s4-switch-text-3
+                  .switch-display(data-option-show='4')
+                    block s4-switch-text-4
+        .slide(data-slide-id='5')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s5-title
+            .row
+              .col-md-4
+                | Images
+              .col-md-4
+                | Images
+              .col-md-4
+                .switch-panel
+                  .title
+                    block s5-switch-title
+                  ul.options
+                    li
+                      button(data-option='1')
+                        block s5-switch-option-1
+                    li
+                      button(data-option='2')
+                        block s5-switch-option-2
+                    li
+                      button(data-option='3')
+                        block s5-switch-option-3
+                    li
+                      button(data-option='4')
+                        block s5-switch-option-4
+                .panel
+                  .switch-display(data-option-show='1')
+                    block s5-switch-text-1
+                  .switch-display(data-option-show='2')
+                    block s5-switch-text-2
+                  .switch-display(data-option-show='3')
+                    block s5-switch-text-3
+                  .switch-display(data-option-show='4')
+                    block s5-switch-text-4
+        .slide(data-slide-id='6')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s6-title
+            .row
+              .col-md-6
+                | Image
+              .col-md-6
+                block s6-text
+        .slide(data-slide-id='7')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s7-title
+            .row
+              .col-md-6
+                | Image
+                block s7-image-caption
+              .col-md-6
+                block s7-text
+        .slide(data-slide-id='8')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s8-title
+            .row
+              .col-md-12
+                | Image
+                block s8-image-caption
+            .row
+              .col-md-12
+                block s8-text
+        .slide(data-slide-id='9')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s9-title
+            .row
+              .col-md-12
+                block s9-text
+        .slide(data-slide-id='10')
+          .container
+            .row
+              .col-md-12
+                .title
+                  block s10-title
+            .row
+              .col-md-12
+                block s10-text
+            .row
+              .col-md-12
+                .switch-panel
+                  .title
+                    block s10-switch-title
+                  ul.options
+                    li
+                      button(data-option='1')
+                        block s10-switch-option-1
+                    li
+                      button(data-option='2')
+                        block s10-switch-option-2
+                    li
+                      button(data-option='3')
+                        block s10-switch-option-3
+                    li
+                      button(data-option='4')
+                        block s10-switch-option-4
+            .row
+              .col-md-12
+                .switch-display(data-option-show='1')
+                  block s10-switch-text-f
+                .switch-display(data-option-show='2')
+                  block s10-switch-text-t
+                .switch-display(data-option-show='3')
+                  block s10-switch-text-f
+                .switch-display(data-option-show='4')
+                  block s10-switch-text-f
+        .slide(data-slide-id='credits')
+          .container
+            .row
+              .col-md-6
+                h1
+                  block bibliography-title
+                block bibliography-text
+              .col-md-6
+                h1
+                  block credits-title
+                block credits-text
+    .footer
+      .navigator
+        ul.toc
+          li
+            a(href='#1') 1
+          li
+            a(href='#2') 2
+          li
+            a(href='#3') 3
+          li
+            a(href='#4') 4
+          li
+            a(href='#5') 5
+          li
+            a(href='#6') 6
+          li
+            a(href='#7') 7
+          li
+            a(href='#8') 8
+          li
+            a(href='#9') 9
+          li
+            a(href='#10') 10
+          li
+            a(href='#credits') i
