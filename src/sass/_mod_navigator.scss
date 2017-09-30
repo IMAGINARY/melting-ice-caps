@@ -1,19 +1,40 @@
+$navigator-button-height: $footer-height * 0.6;
+
+.footer {
+  text-align: center;
+}
+
 .navigator {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  .toc {
+  display: inline-block;
+  margin-top: ($footer-height - $navigator-button-height) / 2;
+  ul.toc {
+    margin: 0;
+    padding: 0;
     li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
       display: inline-block;
-      width: 30px;
-      height: 30px;
+      width: $navigator-button-height;
+      height: $navigator-button-height;
       line-height: 30px;
       text-align: center;
+      margin-right: 2vh;
+
+      &:last-child {
+        margin-right: 0;
+      }
       a {
         display: block;
         width: 100%;
         height: 100%;
-        border: 1px solid black;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: $color-blue-darker;
+        border-radius: 50%;
+        text-decoration: none ;
+        font-size: $navigator-button-height * 0.63333;
+        line-height: $navigator-button-height;
+        text-align: center;
       }
     }
   }

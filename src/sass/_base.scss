@@ -1,20 +1,8 @@
-html, body, #main {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-#main {
-  position: relative;
-}
-
 body {
   @include regularFont;
   color: $color-white;
   @include neg;
-  background-color: $color-blue-dark;
+  background-color: $color-blue-darker;
 }
 
 a {

@@ -1,0 +1,9 @@
+.header {
+  .title {
+    @include headingFont;
+    text-transform: uppercase;
+    font-size: $header-height * 0.6;
+    line-height: $header-height;
+    text-align: center;
+  }
+}

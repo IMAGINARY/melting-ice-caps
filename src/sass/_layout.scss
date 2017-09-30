@@ -1,0 +1,39 @@
+html, body, #main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#main {
+  position: relative;
+}
+
+$header-height: 10vh;
+$slideshow-height: 80vh;
+$footer-height: 10vh;
+
+.header {
+  height: $header-height;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slideshow-wrapper {
+  height: $slideshow-height;
+  width: 100%;
+  position: absolute;
+  top: 10vh;
+  left: 0;
+}
+
+.footer {
+  height: $footer-height;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
