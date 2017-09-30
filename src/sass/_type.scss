@@ -1,3 +1,7 @@
 @mixin headingFont {
+  @include marvelRegular;
+}
 
+@mixin regularFont {
+  @include marvelRegular;
 }

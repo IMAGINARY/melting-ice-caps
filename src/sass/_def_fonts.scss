@@ -34,3 +34,6 @@ $font-stack-oswald: 'Oswald', Arial, "Helvetica Neue", Helvetica, sans-serif;
 @mixin oswaldBold { font-family: $font-stack-oswald; font-weight: 700; }
 
 @mixin ralewayRegular { font-family: Raleway, sans-serif; font-weight: 400; }
+
+@mixin marvelRegular {   font-family: 'Marvel'; font-style: normal; font-weight: 400; }
+@mixin marvelBold {   font-family: 'Marvel'; font-style: normal; font-weight: 700; }

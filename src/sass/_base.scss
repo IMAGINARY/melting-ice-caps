@@ -9,3 +9,15 @@ html, body, #main {
 #main {
   position: relative;
 }
+
+body {
+  @include regularFont;
+  color: $color-white;
+  @include neg;
+  background-color: $color-blue-dark;
+}
+
+a {
+  color: $color-white;
+  @include neg;
+}
