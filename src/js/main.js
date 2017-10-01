@@ -6,7 +6,7 @@ $(() => {
   /**
    * Installs a router that slides the slideshow to the offset based on the url hash
    *
-   * The route handler also fires events:
+   * The route handler also fires events on the slides:
    * - slideEnter:
    *   Fired when a new slide is selected, before the slideshow finishes transitioning to it.
    * - slideEntered:
@@ -58,6 +58,30 @@ $(() => {
     $(slide).on('slideExited', () => {
       $(slide).find('[data-option]').removeClass('active');
       $(slide).find('[data-option-show]').removeClass('active');
+    });
+  });
+
+  /**
+   * Add a position marker in the TOC
+   */
+  $('.slideshow').each((iSlideshow, slideshow) => {
+    const slideshowID = $(slideshow).attr('data-slideshow-id');
+    $(`.toc[data-slideshow=${slideshowID}]`).each((iToc, toc) => {
+      const tocMarker = $("<div class='toc-marker'></div>");
+      $(tocMarker).insertBefore(toc);
+      $(slideshow).on('slideEnter', (ev) => {
+        const slideID = $(ev.target).attr('data-slide-id');
+        const tocItem = $(toc).find(`[href*='#${slideID}']`);
+        if (tocItem.length) {
+          $(tocMarker).addClass('visible');
+          $(tocMarker).css({
+            left: tocItem.position().left,
+            top: tocItem.position().top,
+          });
+        } else {
+          $(tocMarker).removeClass('visible');
+        }
+      });
     });
   });
 });

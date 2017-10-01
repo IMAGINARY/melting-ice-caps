@@ -1,15 +1,18 @@
 $navigator-button-height: $footer-height * 0.6;
+$toc-marker-height: $footer-height * 0.9;
 
 .footer {
   text-align: center;
 }
 
 .navigator {
+  position: relative;
   display: inline-block;
   margin-top: ($footer-height - $navigator-button-height) / 2;
   ul.toc {
     margin: 0;
     padding: 0;
+    position: relative;
     li {
       margin: 0;
       padding: 0;
@@ -36,6 +39,22 @@ $navigator-button-height: $footer-height * 0.6;
         line-height: $navigator-button-height;
         text-align: center;
       }
+    }
+  }
+
+  .toc-marker {
+    display: none;
+    transition: left 0.5s, top 0.5s;
+    position: absolute;
+    width: $toc-marker-height;
+    height: $toc-marker-height;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin-left: -1 * ($toc-marker-height - $navigator-button-height) / 2;
+    margin-top: -1 * ($toc-marker-height - $navigator-button-height) / 2;
+
+    &.visible {
+      display: block;
     }
   }
 }

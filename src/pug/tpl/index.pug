@@ -6,7 +6,7 @@ block main
       .title
         block header-title
     .slideshow-wrapper
-      .slideshow
+      .slideshow(data-slideshow-id='main')
         .slide(data-slide-id='1')
           .container
             .row
@@ -217,7 +217,7 @@ block main
                 block credits-text
     .footer
       .navigator
-        ul.toc
+        ul.toc(data-slideshow='main')
           li
             a(href='#1') 1
           li
