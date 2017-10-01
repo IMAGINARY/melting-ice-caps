@@ -9,3 +9,35 @@ a {
   color: $color-white;
   @include neg;
 }
+
+.panel {
+  background-color: $color-blue-darker;
+  color: $color-white;
+  @include neg;
+  padding: 10px;
+  border: 1px solid $color-white;
+  border-radius: 5px;
+}
+
+.switch-panel {
+  ul.options {
+    margin: 0;
+    padding: 0;
+    li {
+      display: block;
+      list-style: none;
+      padding: 0;
+      margin: 0 0 4px 0;
+      button {
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid $color-white;
+      }
+
+      &.active {
+
+      }
+    }
+  }
+}

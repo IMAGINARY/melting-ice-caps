@@ -17,3 +17,11 @@
     white-space: normal;
   }
 }
+
+.switch-display {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
