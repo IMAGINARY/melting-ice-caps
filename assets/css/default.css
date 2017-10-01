@@ -129,7 +129,7 @@ html, body, #main {
   width: 100%;
   position: relative;
   white-space: nowrap;
-  transition: margin-left 1s; }
+  transition: margin-left 0.5s; }
   .slideshow .slide {
     height: 100%;
     width: 100%;

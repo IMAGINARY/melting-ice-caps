@@ -1,9 +1,23 @@
 /* global routie */
+
+const SlideTransitionDelay = 500;
+
 $(() => {
   /**
    * Installs a router that slides the slideshow to the offset based on the url hash
    *
-   * The route handler also fires slideEnter and slideExit events
+   * The route handler also fires events:
+   * - slideEnter:
+   *   Fired when a new slide is selected, before the slideshow finishes transitioning to it.
+   * - slideEntered:
+   *   Fired after the slideshow finishes transitioning to the new slide.
+   * - slideExit:
+   *   Fired when a slide is being exited, before the slideshow begins transitioning away.
+   * - slideExited:
+   *   Fired when the slideshow finished transitioning away from an exited slide.
+   *
+   * NOTE: It's currently possible that a slideEnter event will be fired on a slide before the
+   * slideExited handler of the same slide finished firing. Same for slideExit / slideEntered.
    */
   $('.slideshow').each((iSlideshow, slideshow) => {
     let currentSlide = null;
@@ -11,9 +25,15 @@ $(() => {
       routie($(slide).attr('data-slide-id'), () => {
         if (currentSlide !== null) {
           $(currentSlide).trigger('slideExit');
+          window.setTimeout((exitedSlide) => {
+            $(exitedSlide).trigger('slideExited');
+          }, SlideTransitionDelay, currentSlide);
         }
         currentSlide = slide;
         $(slide).trigger('slideEnter');
+        setTimeout((enteredSlide) => {
+          $(enteredSlide).trigger('slideEntered');
+        }, SlideTransitionDelay, slide);
         $(slideshow).css({ marginLeft: -1 * $(slide).position().left });
       });
     });
@@ -35,7 +55,7 @@ $(() => {
     });
 
     // Reset all toggles when exiting the slide
-    $(slide).on('slideExit', () => {
+    $(slide).on('slideExited', () => {
       $(slide).find('[data-option]').removeClass('active');
       $(slide).find('[data-option-show]').removeClass('active');
     });
