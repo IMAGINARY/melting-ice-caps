@@ -43,21 +43,25 @@ $(() => {
    * Install toggler controls
    */
   $('.slide:has([data-option])').each((iSlide, slide) => {
+
+    function showOption(slide, optionID) {
+      $(slide).find('[data-option]').removeClass('active');
+      $(slide).find('[data-option-show]').removeClass('active');
+      $(slide).find(`[data-option=${optionID}]`).addClass('active');
+      $(slide).find(`[data-option-show=${optionID}]`).addClass('active');
+    }
+
     $(slide).find('[data-option]').each((iOption, option) => {
       $(option).on('click', (ev) => {
         ev.preventDefault();
-        const selected = $(option).attr('data-option');
-        $(slide).find('[data-option]').removeClass('active');
-        $(option).addClass('active');
-        $(slide).find('[data-option-show]').removeClass('active');
-        $(slide).find(`[data-option-show=${selected}]`).addClass('active');
+        showOption(slide, $(option).attr('data-option'));
       });
+      showOption(slide, 'default');
     });
 
     // Reset all toggles when exiting the slide
     $(slide).on('slideExited', () => {
-      $(slide).find('[data-option]').removeClass('active');
-      $(slide).find('[data-option-show]').removeClass('active');
+      showOption(slide, 'default');
     });
   });
 
