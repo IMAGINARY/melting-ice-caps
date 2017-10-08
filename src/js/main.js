@@ -51,9 +51,18 @@ $(() => {
       $(slide).find(`[data-option-show=${optionID}]`).addClass('active');
     }
 
+    let once = false;
     $(slide).find('[data-option]').each((iOption, option) => {
       $(option).on('click', (ev) => {
         ev.preventDefault();
+
+        if ($(option).parents('[data-option-once]').length > 0) {
+          if (once) {
+            return;
+          }
+          once = true;
+        }
+
         showOption(slide, $(option).attr('data-option'));
       });
       showOption(slide, 'default');
@@ -61,6 +70,7 @@ $(() => {
 
     // Reset all toggles when exiting the slide
     $(slide).on('slideExited', () => {
+      once = false;
       showOption(slide, 'default');
     });
   });
