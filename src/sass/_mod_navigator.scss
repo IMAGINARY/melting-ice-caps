@@ -72,3 +72,9 @@ $toc-marker-height: $footer-height * 0.8;
     text-decoration: none;
   }
 }
+
+.disable-language-switcher {
+  .footer .lang-switch {
+    display: none;
+  }
+}

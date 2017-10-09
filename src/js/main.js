@@ -9,6 +9,7 @@ function readConfig() {
   console.log('Reading config');
   const defaults = {
     allowTextSelection: true,
+    showLanguageSwitcher: true,
   };
   return new Promise((accept, reject) => {
     superagent
@@ -146,6 +147,13 @@ function init(cfg) {
      */
     if (cfg.allowTextSelection === false) {
       $(document.body).addClass('disable-select');
+    }
+
+    /**
+     * Hide language switcher
+     */
+    if (cfg.showLanguageSwitcher === false) {
+      $(document.body).addClass('disable-language-switcher');
     }
 
     /**

@@ -8,4 +8,13 @@
 #
 allowTextSelection: true
 
-
+#
+# Show language switcher
+# (default: true)
+#
+# It should not be enabled if not necessary. Finding the exhibition in the "wrong" language
+# might confuse visitors who will not notice the language switcher and simply walk away
+# Titles and other verbal element sometimes have an "eye catching" quality that will be lost
+# in a language the visitor cannot comprehend.
+#
+showLanguageSwitcher: true

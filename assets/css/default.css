@@ -346,6 +346,9 @@ video::-webkit-media-controls-volume-slider {
     color: #fff;
     text-decoration: none; }
 
+.disable-language-switcher .footer .lang-switch {
+  display: none; }
+
 .slide h3 {
   font-family: 'Marvel';
   font-style: normal;
