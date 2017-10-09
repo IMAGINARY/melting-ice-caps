@@ -10,6 +10,7 @@ function readConfig() {
   const defaults = {
     allowTextSelection: true,
     showLanguageSwitcher: true,
+    videoRoot: 'video',
   };
   return new Promise((accept, reject) => {
     superagent
@@ -118,7 +119,6 @@ function init(cfg) {
     /**
      * Autoplay / Autostop videos
      */
-
     $('.slide:has(video)').each((iSlide, slide) => {
       let stopRequested = false;
       let playing = false;
@@ -148,6 +148,16 @@ function init(cfg) {
           }
         });
       });
+    });
+
+    /**
+     * Video lazy load
+     */
+    $('video source[data-path]').each((iSource, source) => {
+      const path = $(source).attr('data-path');
+      $(source).attr('src', `${cfg.videoRoot}/${path}`);
+      const video = source.parentElement;
+      video.load();
     });
 
     /**
@@ -182,8 +192,9 @@ function init(cfg) {
      */
     $('.slideshow').each((iSlideshow, slideshow) => {
       let currentSlide = null;
+      const routes = {};
       $(slideshow).find('[data-slide-id]').each((iSlide, slide) => {
-        routie($(slide).attr('data-slide-id'), () => {
+        routes[$(slide).attr('data-slide-id')] = (() => {
           if (currentSlide !== null) {
             $(currentSlide).trigger('slideExit');
             window.setTimeout((exitedSlide) => {
@@ -201,9 +212,10 @@ function init(cfg) {
         });
       });
       // Default route
-      routie('*', () => {
+      routes['*'] = (() => {
         routie('1');
       });
+      routie(routes);
     });
   });
 }

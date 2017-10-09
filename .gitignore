@@ -1,6 +1,6 @@
 work
 node_modules
-assets/video/*
-!assets/video/.gitkeep
+video/*
+!video/.gitkeep
 
 yarn-error.log

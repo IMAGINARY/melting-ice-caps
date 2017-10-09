@@ -18,3 +18,12 @@ allowTextSelection: true
 # in a language the visitor cannot comprehend.
 #
 showLanguageSwitcher: true
+
+#
+# Video root
+# (default: 'video')
+#
+# Root path where the videos are located. It can be a local directory (relative to the root)
+# or the absolute URL of a remote directory.
+#
+videoRoot: '//imaginaryexhibits.s3.amazonaws.com/melting-ice-caps/video'

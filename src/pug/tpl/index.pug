@@ -16,7 +16,8 @@ block main
             .row
               .col-md-12.col-no-padding
                 .embed-responsive.embed-responsive-half16by9.front-video
-                  video.embed-responsive-item(src='assets/video/tl-hill.mp4', loop)
+                  video.embed-responsive-item(loop)
+                    source(data-path='tl-hill.mp4', type='video/mp4')
             .row
               .col-md-8.col-md-push-2
                 .large.text-center
@@ -197,12 +198,10 @@ block main
                 block s9-text
                 .embed-responsive.embed-responsive-16by9
                   video.embed-responsive-item(
-                    src='assets/video/elmerice_simulation.mp4',
-                    width=1920,
-                    height=1080,
                     controls
                     controlsList="nodownload nofullscreen noremoteplayback"
                   )
+                    source(data-path='elmerice_simulation.mp4', type='video/mp4')
         .slide(data-slide-id='10')
           .container-fluid
             .row
