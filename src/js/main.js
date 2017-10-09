@@ -91,9 +91,11 @@ function init(cfg) {
       $(`.toc[data-slideshow=${slideshowID}]`).each((iToc, toc) => {
         const tocMarker = $("<div class='toc-marker'></div>");
         $(tocMarker).insertBefore(toc);
+        let slideID = null;
+        let tocItem = null;
         $(slideshow).on('slideEnter', (ev) => {
-          const slideID = $(ev.target).attr('data-slide-id');
-          const tocItem = $(toc).find(`[href*='#${slideID}']`);
+          slideID = $(ev.target).attr('data-slide-id');
+          tocItem = $(toc).find(`[href*='#${slideID}']`);
           if (tocItem.length) {
             $(tocMarker).addClass('visible');
             $(tocMarker).css({
@@ -103,6 +105,12 @@ function init(cfg) {
           } else {
             $(tocMarker).removeClass('visible');
           }
+        });
+        $(window).on('resize', () => {
+          $(tocMarker).css({
+            left: tocItem.position().left,
+            top: tocItem.position().top,
+          });
         });
       });
     });
