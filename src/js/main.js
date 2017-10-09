@@ -182,6 +182,10 @@ function init(cfg) {
           $(slideshow).css({ marginLeft: -1 * $(slide).position().left });
         });
       });
+      // Default route
+      routie('*', () => {
+        routie('1');
+      });
     });
   });
 }

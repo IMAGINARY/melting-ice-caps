@@ -330,6 +330,22 @@ video::-webkit-media-controls-volume-slider {
     .navigator .toc-marker.visible {
       display: block; }
 
+.footer .lang-switch {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.2vmin;
+  line-height: 3.84vmin;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 10vh;
+  margin-right: 4vmin;
+  color: #fff; }
+  .footer .lang-switch:hover {
+    color: #fff;
+    text-decoration: none; }
+
 .slide h3 {
   font-family: 'Marvel';
   font-style: normal;

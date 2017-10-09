@@ -58,3 +58,17 @@ $toc-marker-height: $footer-height * 0.8;
     }
   }
 }
+
+.footer .lang-switch {
+  @include mediumText;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: $footer-height;
+  margin-right: 4vmin;
+  color: $color-white;
+  &:hover {
+    color: $color-white;
+    text-decoration: none;
+  }
+}
