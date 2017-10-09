@@ -1,0 +1,17 @@
+.panel {
+
+  background-color: transparent;
+  color: $color-white;
+  border-color: $color-blue;
+  @include smallText;
+
+  h2 {
+    text-transform: uppercase;
+    margin-top: 0;
+    color: $color-blue;
+  }
+
+  p {
+    margin: 0;
+  }
+}

@@ -1,13 +1,41 @@
 body {
-  @include regularFont;
+  @include regularText;
   color: $color-white;
   @include neg;
   background-color: $color-blue-darker;
 }
 
+h1 {
+  @include largeText;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2vmin 0;
+}
+
+h2 {
+  @include mediumText;
+}
+
+.large {
+  @include mediumText;
+}
+
+small {
+  @include smallText;
+}
+
 a {
   color: $color-white;
   @include neg;
+}
+
+.img-responsive {
+  margin-bottom: 1vmin;
+}
+
+.subtitle {
+  @include largeText;
+  text-align: center;
 }
 
 .panel {
@@ -17,27 +45,4 @@ a {
   padding: 10px;
   border: 1px solid $color-white;
   border-radius: 5px;
-}
-
-.switch-panel {
-  ul.options {
-    margin: 0;
-    padding: 0;
-    li {
-      display: block;
-      list-style: none;
-      padding: 0;
-      margin: 0 0 4px 0;
-      button {
-        display: block;
-        width: 100%;
-        background-color: transparent;
-        border: 1px solid $color-white;
-      }
-
-      &.active {
-
-      }
-    }
-  }
 }

@@ -1,12 +1,12 @@
 extends tpl/index
 
+block init
+  - setLang('en')
+
 block title
   | Simulating the Melting of Ice Caps
 
 block header-title
-  | Simulating the Melting of Ice Caps
-
-block s1-title
   | Simulating the Melting of Ice Caps
 
 block s1-authors
@@ -17,9 +17,6 @@ block s1-text
     Sea levels are rising for various reasons related to global warming. The glaciers of Antarctica and Greenland,
     known as ice caps or ice sheets, play a major role in changes in sea level. Is it possible to predict future
     changes in these ice caps, and particularly the calving of icebergs into the ocean?
-
-block s1-start
-  | START
 
 block s2-title
   | Contribution to sea level rise
@@ -206,6 +203,7 @@ block s7-image-caption
   p.
     Greenland mesh and simulated velocity. There are more triangles in the outlet glacier areas so that rapid
     variations in velocity can be computed precisely.
+block s7-image-credits
   p.
     Image by Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger, T., Greve, R.,
     and Vaughan, D. G.: Greenland ice sheet contribution to sea-level rise from a new-generation ice-sheet model, The
@@ -228,6 +226,7 @@ block s8-image-caption
   p.
     Simulated velocity in 3D of the Greenland ice cap. Outlet glaciers are much faster (in red, 12 km per year) than
     other areas (in blue, 1 meter per year).
+block s8-image-credit
   p.
     Image by Fabien Gillet-Chaulet, CNRS & LGGE, Grenoble.
 
@@ -326,7 +325,8 @@ block credits-text
     Jocelyne Erhel (Inria)
   h3 Design / Production:
   p.
-    Interstices
+    Interstices<br>
+    IMAGINARY (www.imaginary.org)
   h3 Graphic Design:
   p.
     Victoria Denys

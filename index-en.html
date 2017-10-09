@@ -25,13 +25,7 @@
       <div class="slideshow-wrapper">
         <div class="slideshow" data-slideshow-id="main">
           <div class="slide" data-slide-id="1">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="title">Simulating the Melting of Ice Caps
-                  </div>
-                </div>
-              </div>
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
                   <div class="subtitle">Authors: Maëlle Nodet and Jocelyne Erhel
@@ -39,59 +33,65 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
-                  <p>
-                    Sea levels are rising for various reasons related to global warming. The glaciers of Antarctica and Greenland,
-                    known as ice caps or ice sheets, play a major role in changes in sea level. Is it possible to predict future
-                    changes in these ice caps, and particularly the calving of icebergs into the ocean?
-                    
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12"><a class="btn btn-default" href="#2">START</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="slide" data-slide-id="2">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="title">Contribution to sea level rise
+                <div class="col-md-12 col-no-padding">
+                  <div class="embed-responsive embed-responsive-half16by9 front-video">
+                    <video class="embed-responsive-item" src="assets/video/tl-hill.mp4" loop></video>
                   </div>
                 </div>
               </div>
               <div class="row">
+                <div class="col-md-8 col-md-push-2">
+                  <div class="large text-center">
+                    <p>
+                      Sea levels are rising for various reasons related to global warming. The glaciers of Antarctica and Greenland,
+                      known as ice caps or ice sheets, play a major role in changes in sea level. Is it possible to predict future
+                      changes in these ice caps, and particularly the calving of icebergs into the ocean?
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="2">
+            <div class="container-fluid">
+              <div class="row">
                 <div class="col-md-12">
+                  <h1>Contribution to sea level rise
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-push-3">
                   <p>
                     The contribution of ice caps to sea level rise is essentially a combination of three phenomena: snowfalls and
                     melting of ice on the surface, due to climate change and variations in glacier altitude; thinning of floating ice
                     shelves, which are melting from below because the ocean is warming up; and the discharge of ice into the sea when
                     ice flowing towards the sea breaks off, calving icebergs.
                     
-                  </p>
+                  </p><img class="img-responsive" src="assets/img/calving.jpg">
                 </div>
               </div>
             </div>
           </div>
           <div class="slide" data-slide-id="3">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title">Modelling and simulation
-                  </div>
+                  <h1>Modelling and simulation
+                  </h1>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3 col-md-push-1"><img class="img-responsive" src="assets/img/subglacial-river.jpg">
                   Subglacial river frozen in winter<br>
                   Photo : Yves Chaux
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3 col-md-push-1"><img class="img-responsive" src="assets/img/snow-covered-surface.jpg">
                   Snow-covered surface of a glacier<br>
                   Photo : Yves Chaux
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-md-push-1">
                   <p>
                     The physical processes in an ice cap, both inside and on the surface, are being studied by glaciologists, in
                     collaboration with climatologists, oceanologists, mathematicians and computer scientists. A numerical model based
@@ -104,21 +104,94 @@
             </div>
           </div>
           <div class="slide" data-slide-id="4">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title">Physical processes at work in an ice sheet
-                  </div>
+                  <h1>Physical processes at work in an ice sheet
+                  </h1>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4 col-md-push-8">
-                  <div class="panel switch-panel">
-                    <div class="title">Select an area
+                <div class="col-md-6">
+                  <div class="switch-display" data-option-show="default"><img class="img-responsive" src="assets/img/physical-processes-inside.jpg"></div>
+                  <div class="switch-display" data-option-show="2"><img class="img-responsive" src="assets/img/physical-processes-base.jpg"></div>
+                  <div class="switch-display" data-option-show="3"><img class="img-responsive" src="assets/img/en/physical-processes-surface.jpg"></div>
+                  <div class="switch-display" data-option-show="4"><img class="img-responsive" src="assets/img/physical-processes-sea.jpg"></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="switch-display" data-option-show="default">
+                        <div class="panel">
+                          <h2>Inside</h2>
+                          <p>
+                            Ice is a fluid that flows under the influence of gravity. It flows much more slowly than liquid water because it
+                            has different characteristics. In particular, ice is a plastic fluid, i.e. it changes shape when it flows. The
+                            physical and mechanical properties of ice change with pressure and temperature. Pressure increases with depth
+                            because of the weight of the ice, and temperature, which is very low on the surface, also increases with depth.
+                            Consequently, the velocity of the glacier varies in intensity and direction inside the ice cap.
+                            
+                          </p>
+                        </div>
+                      </div>
+                      <div class="switch-display" data-option-show="2">
+                        <div class="panel">
+                          <h2>At the base</h2>
+                          <p>
+                            When the ice is cold, at the base it sticks to the bedrock and the friction forces reduce its velocity. The
+                            temperature at the base, as inside the glacier, increases with the geothermal flux, which is the heat given off by
+                            the earth’s crust. When the ice is at its melting point (0°C), a film of meltwater enables it to slide and
+                            increases its velocity.
+                          </p>
+                          <p>
+                            In Antarctica and Greenland, the areas where sliding is greatest are on the coast, in valleys resembling canyons
+                            or fjords. These rivers of ice, known as outlet glaciers, can have spectacular velocities, above 10 km per year.
+                            
+                          </p>
+                        </div>
+                      </div>
+                      <div class="switch-display" data-option-show="3">
+                        <div class="panel">
+                          <h2>On the surface</h2>
+                          <p>
+                            On the surface, ice is added to the existing glacier by precipitations and by the refreezing of water: this is
+                            accumulation. However, ice also disappears because it melts or because of the wind: this is ablation. The weather
+                            conditions and temperature at the surface of the ice cap have an effect on the amount of precipitation as well as
+                            on melting and wind transportation, and therefore on accumulation and ablation and consequently on the glacier’s
+                            altitude. When the surface temperature increases because of global warming, the ice melts and the altitude
+                            decreases through ablation. But the temperature increases when the altitude decreases, so the glacier continues to
+                            melt and thin. This phenomenon can therefore escalate and the ice cap can quickly disappear.
+                          </p>
+                          <p>
+                            This instability of small ice caps is an example of feedback loop, where a cause produces an effect, which in turn
+                            has a reinforcing impact on that cause.
+                            
+                          </p>
+                        </div>
+                      </div>
+                      <div class="switch-display" data-option-show="4">
+                        <div class="panel">
+                          <h2>At sea level</h2>
+                          <p>
+                            Fast outlet glaciers lose large amounts of ice in the form of icebergs and thus contribute to sea level rise.
+                            Floating ice shelves are an extension of ice caps over the ocean. When seawater temperature rises, they melt from
+                            the base, raising the sea level. This sea level rise in turn affects the velocity of the glacier: feedback can be
+                            observed between the different physical processes. The sea level rise changes the grounding line, which is the line
+                            where the ice cap starts to float. This modifies the geometry of the ice shelf, and consequently the flow of ice.
+                            
+                          </p>
+                        </div>
+                      </div>
                     </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="switch-group">
+                    <h2 class="title">Select an area
+                    </h2>
                     <ul class="options">
                       <li>
-                        <button data-option="1">Inside
+                        <button data-option="default">Inside
                         </button>
                       </li>
                       <li>
@@ -134,107 +207,28 @@
                         </button>
                       </li>
                     </ul>
-                  </div>
-                  <div class="switch-display" data-option-show="1">
-                    <div class="panel">
-                      <h2>Inside</h2>
-                      <p>
-                        Ice is a fluid that flows under the influence of gravity. It flows much more slowly than liquid water because it
-                        has different characteristics. In particular, ice is a plastic fluid, i.e. it changes shape when it flows. The
-                        physical and mechanical properties of ice change with pressure and temperature. Pressure increases with depth
-                        because of the weight of the ice, and temperature, which is very low on the surface, also increases with depth.
-                        Consequently, the velocity of the glacier varies in intensity and direction inside the ice cap.
-                        
-                      </p>
-                    </div>
-                  </div>
-                  <div class="switch-display" data-option-show="2">
-                    <div class="panel">
-                      <h2>At the base</h2>
-                      <p>
-                        When the ice is cold, at the base it sticks to the bedrock and the friction forces reduce its velocity. The
-                        temperature at the base, as inside the glacier, increases with the geothermal flux, which is the heat given off by
-                        the earth’s crust. When the ice is at its melting point (0°C), a film of meltwater enables it to slide and
-                        increases its velocity.
-                      </p>
-                      <p>
-                        In Antarctica and Greenland, the areas where sliding is greatest are on the coast, in valleys resembling canyons
-                        or fjords. These rivers of ice, known as outlet glaciers, can have spectacular velocities, above 10 km per year.
-                        
-                      </p>
-                    </div>
-                  </div>
-                  <div class="switch-display" data-option-show="3">
-                    <div class="panel">
-                      <h2>On the surface</h2>
-                      <p>
-                        On the surface, ice is added to the existing glacier by precipitations and by the refreezing of water: this is
-                        accumulation. However, ice also disappears because it melts or because of the wind: this is ablation. The weather
-                        conditions and temperature at the surface of the ice cap have an effect on the amount of precipitation as well as
-                        on melting and wind transportation, and therefore on accumulation and ablation and consequently on the glacier’s
-                        altitude. When the surface temperature increases because of global warming, the ice melts and the altitude
-                        decreases through ablation. But the temperature increases when the altitude decreases, so the glacier continues to
-                        melt and thin. This phenomenon can therefore escalate and the ice cap can quickly disappear.
-                      </p>
-                      <p>
-                        This instability of small ice caps is an example of feedback loop, where a cause produces an effect, which in turn
-                        has a reinforcing impact on that cause.
-                        
-                      </p>
-                    </div>
-                  </div>
-                  <div class="switch-display" data-option-show="4">
-                    <div class="panel">
-                      <h2>At sea level</h2>
-                      <p>
-                        Fast outlet glaciers lose large amounts of ice in the form of icebergs and thus contribute to sea level rise.
-                        Floating ice shelves are an extension of ice caps over the ocean. When seawater temperature rises, they melt from
-                        the base, raising the sea level. This sea level rise in turn affects the velocity of the glacier: feedback can be
-                        observed between the different physical processes. The sea level rise changes the grounding line, which is the line
-                        where the ice cap starts to float. This modifies the geometry of the ice shelf, and consequently the flow of ice.
-                        
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="slide" data-slide-id="5">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title">The mathematical model
-                  </div>
+                  <h1>The mathematical model
+                  </h1>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4">Images</div>
-                <div class="col-md-4">Images</div>
-                <div class="col-md-4">
-                  <div class="panel switch-panel">
-                    <div class="title">Select an area
-                    </div>
-                    <ul class="options">
-                      <li>
-                        <button data-option="1">Inside
-                        </button>
-                      </li>
-                      <li>
-                        <button data-option="2">At the base
-                        </button>
-                      </li>
-                      <li>
-                        <button data-option="3">On the surface
-                        </button>
-                      </li>
-                      <li>
-                        <button data-option="4">At sea level
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="switch-display" data-option-show="1">
+                <div class="col-md-5 vpull-over-title">
+                  <div class="switch-display" data-option-show="default"><img class="img-responsive" src="assets/img/en/model-inside.png"></div>
+                  <div class="switch-display" data-option-show="2"><img class="img-responsive" src="assets/img/en/model-base.png"></div>
+                  <div class="switch-display" data-option-show="3"><img class="img-responsive" src="assets/img/en/model-surface.png"></div>
+                  <div class="switch-display" data-option-show="4"><img class="img-responsive" src="assets/img/en/model-sea.png"></div>
+                </div>
+                <div class="col-md-5">
+                  <div class="switch-display" data-option-show="default">
                     <div class="panel">
                       <h2>Inside</h2>
                       <p>
@@ -311,20 +305,44 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-md-2">
+                  <div class="switch-group">
+                    <h2 class="title">Select an area
+                    </h2>
+                    <ul class="options">
+                      <li>
+                        <button data-option="default">Inside
+                        </button>
+                      </li>
+                      <li>
+                        <button data-option="2">At the base
+                        </button>
+                      </li>
+                      <li>
+                        <button data-option="3">On the surface
+                        </button>
+                      </li>
+                      <li>
+                        <button data-option="4">At sea level
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="slide" data-slide-id="6">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title">Computing the ice sheet dynamics
-                  </div>
+                  <h1>Computing the ice sheet dynamics
+                  </h1>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">Image</div>
-                <div class="col-md-6">
+                <div class="col-md-2 col-md-push-3"><img class="img-responsive" src="assets/img/en/computing-dynamics.png"></div>
+                <div class="col-md-3 col-md-push-4">
                   <p>
                     To predict the ice sheet behaviour, it is necessary to compute the surface altitude at regular intervals, e.g.
                     every year. To do this, it is necessary to update the Surface Mass Balance (SMB), which depends on velocity and
@@ -345,64 +363,70 @@
             </div>
           </div>
           <div class="slide" data-slide-id="7">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title">Computing the velocity of a glacier
-                  </div>
+                  <h1>Computing the velocity of a glacier
+                  </h1>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6">Image
-                  <p>
-                    Greenland mesh and simulated velocity. There are more triangles in the outlet glacier areas so that rapid
-                    variations in velocity can be computed precisely.
-                  </p>
-                  <p>
-                    Image by Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger, T., Greve, R.,
-                    and Vaughan, D. G.: Greenland ice sheet contribution to sea-level rise from a new-generation ice-sheet model, The
-                    Cryosphere, 6, 1561-1576, 2012. Licence CC-BY 3.0.
-                    
-                  </p>
-                </div>
-                <div class="col-md-6">
-                  <p>
-                    If the surface altitude for year n is known, it is possible to compute the velocity for year n by solving the
-                    Stokes partial differential equations.
-                  </p>
-                  <p>
-                    The first step is to go from unknowns that are everywhere defined to unknowns defined by a finite number of values.
-                    This step is known as spatial discretisation. The surface of the glacier is cut up into small triangles, and the
-                    thickness of the glacier into slices, which results in the division of the glacier’s volume into prisms (kinds of
-                    ice cubes), creating what is known as a mesh.
-                    
-                  </p>
+                <div class="col-md-4 col-md-push-2"><img class="img-responsive" src="assets/img/greenland-mesh.jpg"><small>
+                    <p>
+                      Greenland mesh and simulated velocity. There are more triangles in the outlet glacier areas so that rapid
+                      variations in velocity can be computed precisely.
+                    </p></small></div>
+                <div class="col-md-4 col-md-push-2">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>
+                        If the surface altitude for year n is known, it is possible to compute the velocity for year n by solving the
+                        Stokes partial differential equations.
+                      </p>
+                      <p>
+                        The first step is to go from unknowns that are everywhere defined to unknowns defined by a finite number of values.
+                        This step is known as spatial discretisation. The surface of the glacier is cut up into small triangles, and the
+                        thickness of the glacier into slices, which results in the division of the glacier’s volume into prisms (kinds of
+                        ice cubes), creating what is known as a mesh.
+                        
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <p>&nbsp;</p><small>
+                        <p>
+                          Image by Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger, T., Greve, R.,
+                          and Vaughan, D. G.: Greenland ice sheet contribution to sea-level rise from a new-generation ice-sheet model, The
+                          Cryosphere, 6, 1561-1576, 2012. Licence CC-BY 3.0.
+                          
+                        </p></small>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="slide" data-slide-id="8">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title">Solving the stokes equations
-                  </div>
+                  <h1>Solving the stokes equations
+                  </h1>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">Image
+                <div class="col-md-5 col-md-push-1"><img class="img-responsive" src="assets/img/vitesse-simule.jpg">
                   <p>
                     Simulated velocity in 3D of the Greenland ice cap. Outlet glaciers are much faster (in red, 12 km per year) than
                     other areas (in blue, 1 meter per year).
-                  </p>
-                  <p>
-                    Image by Fabien Gillet-Chaulet, CNRS & LGGE, Grenoble.
-                    
-                  </p>
+                  </p><small>
+                    <p>
+                      Image by Fabien Gillet-Chaulet, CNRS & LGGE, Grenoble.
+                      
+                    </p></small>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4 col-md-push-1">
                   <p>
                     The Stokes equations are then converted to a system of complicated algebraic equations (without any derivatives),
                     with as many equations as unknowns. It is not possible to solve exactly such a system; therefore the solution is
@@ -415,70 +439,66 @@
             </div>
           </div>
           <div class="slide" data-slide-id="9">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title">The future for Greenland
-                  </div>
+                  <h1>The future for Greenland
+                  </h1>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6 col-md-push-3">
                   <p>
                     A computer code can simulate changes to the ice shelf by applying the weather conditions at the surface, supplied
                     for example by the IPCC’s climate models. These weather data depend on the socioeconomic scenario chosen.
                     
                   </p>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" src="assets/video/elmerice_simulation.mp4" width="1920" height="1080" controls controlsList="nodownload nofullscreen noremoteplayback"></video>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="slide" data-slide-id="10">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12">
-                  <div class="title">Quiz
-                  </div>
+                  <h1>Quiz
+                  </h1>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-2 col-md-push-2"><img class="img-responsive" src="assets/img/quiz-l.png"></div>
+                <div class="col-md-4 col-md-push-2">
                   <p>
                     To simulate the ice sheet dynamics, a mesh is defined by cutting the volume into small ice cubes. What happens
                     when the number of ice cubes is reduced?
                     
                   </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="panel switch-panel">
-                    <div class="title">
-                    </div>
-                    <ul class="options">
+                  <div class="switch-group switch-group-quiz text-center">
+                    <h2 class="title">
+                    </h2>
+                    <ul class="options" data-option-once>
                       <li>
-                        <button data-option="1">1. The computation is quicker and more accurate
+                        <button class="switch-group-quiz-wrong" data-option="1">1. The computation is quicker and more accurate
                         </button>
                       </li>
                       <li>
-                        <button data-option="2">2. The computation is quicker and less accurate
+                        <button class="switch-group-quiz-right" data-option="2">2. The computation is quicker and less accurate
                         </button>
                       </li>
                       <li>
-                        <button data-option="3">3. The computation is slower and more accurate
+                        <button class="switch-group-quiz-wrong" data-option="3">3. The computation is slower and more accurate
                         </button>
                       </li>
                       <li>
-                        <button data-option="4">4. The computation is slower and less accurate
+                        <button class="switch-group-quiz-wrong" data-option="4">4. The computation is slower and less accurate
                         </button>
                       </li>
                     </ul>
                   </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="switch-display" data-option-show="1">
+                  <div class="switch-display switch-group-quiz-wrong" data-option-show="1">
                     <h2>No, the correct answer is the 2</h2>
                     <p>
                       To compute the velocity and altitude with a good level of accuracy, a high resolution mesh is required, especially
@@ -488,7 +508,7 @@
                       
                     </p>
                   </div>
-                  <div class="switch-display" data-option-show="2">
+                  <div class="switch-display switch-group-quiz-right" data-option-show="2">
                     <h2>Bravo!</h2>
                     <p>
                       To compute the velocity and altitude with a good level of accuracy, a high resolution mesh is required, especially
@@ -498,7 +518,7 @@
                       
                     </p>
                   </div>
-                  <div class="switch-display" data-option-show="3">
+                  <div class="switch-display switch-group-quiz-wrong" data-option-show="3">
                     <h2>No, the correct answer is the 2</h2>
                     <p>
                       To compute the velocity and altitude with a good level of accuracy, a high resolution mesh is required, especially
@@ -508,7 +528,7 @@
                       
                     </p>
                   </div>
-                  <div class="switch-display" data-option-show="4">
+                  <div class="switch-display switch-group-quiz-wrong" data-option-show="4">
                     <h2>No, the correct answer is the 2</h2>
                     <p>
                       To compute the velocity and altitude with a good level of accuracy, a high resolution mesh is required, especially
@@ -519,80 +539,84 @@
                     </p>
                   </div>
                 </div>
+                <div class="col-md-2 col-md-push-2"><img class="img-responsive" src="assets/img/quiz-r.png"></div>
               </div>
             </div>
           </div>
           <div class="slide" data-slide-id="credits">
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
-                <div class="col-md-6">
-                  <h1>Bibliography
-                  </h1>
-                  <p>
-                    Maëlle Nodet, Jocelyne Erhel. Modéliser et simuler la fonte des calottes polaires, Interstices, 2015.
-                    
-                  </p>
-                  <p>
-                    Maëlle Nodet, Jocelyne Erhel. Des outils mathématiques pour prévoir la fonte des calottes polaires, Interstices,
-                    2015.
-                    
-                  </p>
-                  <p>
-                    Maëlle Nodet. De la glace à la mer. Matapli, SMAI, 2013.
-                    
-                  </p>
-                  <p>
-                    Guillaume Jouvet. L'évolution des glaciers, modélisation et prédiction. Accromath, Vol 8.2, 2013.
-                    
-                  </p>
-                  <p>
-                    Guillaume Jouvet. The future of glaciers, Imaginary, 2013
-                    
-                  </p>
-                  <p>
-                    Fabien Gillet-Chaulet. Elmer/Ice, un modèle de calotte polaire de nouvelle génération. Journée Mésochallenge
-                    Equip@meso, 2013.
-                    
-                  </p>
-                  <p>
-                    Catherine Ritz, Tamsin L. Edwards, Gaël Durand, Antony J. Payne, Vincent Peyaud & Richard C. A. Hindmarsh:
-                    Potential sea-level rise from Antarctic ice-sheet instability constrained by observations, Nature, 528, 115-118,
-                    2015.
-                    
-                  </p>
-                  <p>
-                    Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger, T., Greve, R., and
-                    Vaughan, D. G.: Greenland ice sheet contribution to sea-level rise from a new-generation ice-sheet model, The
-                    Cryosphere, 6, 1561-1576, 2012.
-                    
-                  </p>
-                </div>
-                <div class="col-md-6">
+                <div class="col-md-4 col-md-push-1">
                   <h1>Credits
-                  </h1>
-                  <h3>Authors:</h3>
-                  <p>
-                    Maëlle Nodet (Université Grenoble Alpes)<br>
-                    Jocelyne Erhel (Inria)
-                  </p>
-                  <h3>Design / Production:</h3>
-                  <p>Interstices</p>
-                  <h3>Graphic Design:</h3>
-                  <p>Victoria Denys</p>
-                  <h3>Images:</h3>
-                  <p>
-                    Yves Chaux (p. 3);<br>
-                    d'après Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger, T., Greve, R.,
-                    and Vaughan, D. G. (p. 7) ;<br>
-                    Fabien Gillet-Chaulet, CNRS & LGGE, Grenoble (p. 8)
-                  </p>
-                  <h3>Videos:</h3>
-                  <p>
-                    www.CHASINGICE.com (p. 2) ;<br>
-                    eSTICC Elmer ICE, Simulation Fabien Gillet-Chaulet LGGE, Grenoble, Visualisation Jyrki Hokkanen CST-IT Center For
-                    Science (p. 9)
-                  </p>
-                  <p>This presentation is distributed under a Creative Commons BY-NC-SA license.</p>
+                  </h1><small>
+                    <h3>Authors:</h3>
+                    <p>
+                      Maëlle Nodet (Université Grenoble Alpes)<br>
+                      Jocelyne Erhel (Inria)
+                    </p>
+                    <h3>Design / Production:</h3>
+                    <p>
+                      Interstices<br>
+                      IMAGINARY (www.imaginary.org)
+                    </p>
+                    <h3>Graphic Design:</h3>
+                    <p>Victoria Denys</p>
+                    <h3>Images:</h3>
+                    <p>
+                      Yves Chaux (p. 3);<br>
+                      d'après Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger, T., Greve, R.,
+                      and Vaughan, D. G. (p. 7) ;<br>
+                      Fabien Gillet-Chaulet, CNRS & LGGE, Grenoble (p. 8)
+                    </p>
+                    <h3>Videos:</h3>
+                    <p>
+                      www.CHASINGICE.com (p. 2) ;<br>
+                      eSTICC Elmer ICE, Simulation Fabien Gillet-Chaulet LGGE, Grenoble, Visualisation Jyrki Hokkanen CST-IT Center For
+                      Science (p. 9)
+                    </p>
+                    <p>This presentation is distributed under a Creative Commons BY-NC-SA license.</p></small>
+                </div>
+                <div class="col-md-4 col-md-push-3">
+                  <h1>Bibliography
+                  </h1><small>
+                    <p>
+                      Maëlle Nodet, Jocelyne Erhel. Modéliser et simuler la fonte des calottes polaires, Interstices, 2015.
+                      
+                    </p>
+                    <p>
+                      Maëlle Nodet, Jocelyne Erhel. Des outils mathématiques pour prévoir la fonte des calottes polaires, Interstices,
+                      2015.
+                      
+                    </p>
+                    <p>
+                      Maëlle Nodet. De la glace à la mer. Matapli, SMAI, 2013.
+                      
+                    </p>
+                    <p>
+                      Guillaume Jouvet. L'évolution des glaciers, modélisation et prédiction. Accromath, Vol 8.2, 2013.
+                      
+                    </p>
+                    <p>
+                      Guillaume Jouvet. The future of glaciers, Imaginary, 2013
+                      
+                    </p>
+                    <p>
+                      Fabien Gillet-Chaulet. Elmer/Ice, un modèle de calotte polaire de nouvelle génération. Journée Mésochallenge
+                      Equip@meso, 2013.
+                      
+                    </p>
+                    <p>
+                      Catherine Ritz, Tamsin L. Edwards, Gaël Durand, Antony J. Payne, Vincent Peyaud & Richard C. A. Hindmarsh:
+                      Potential sea-level rise from Antarctic ice-sheet instability constrained by observations, Nature, 528, 115-118,
+                      2015.
+                      
+                    </p>
+                    <p>
+                      Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger, T., Greve, R., and
+                      Vaughan, D. G.: Greenland ice sheet contribution to sea-level rise from a new-generation ice-sheet model, The
+                      Cryosphere, 6, 1561-1576, 2012.
+                      
+                    </p></small>
                 </div>
               </div>
             </div>
@@ -612,7 +636,7 @@
             <li><a href="#8">8</a></li>
             <li><a href="#9">9</a></li>
             <li><a href="#10">10</a></li>
-            <li><a href="#credits">i</a></li>
+            <li><a href="#credits">𝑖</a></li>
           </ul>
         </div>
       </div>

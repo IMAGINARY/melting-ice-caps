@@ -9,11 +9,15 @@
 
 @import "util";
 @import "util_responsive";
+@import "util_embed";
 
 @import "type";
 @import "base";
 @import "layout";
 
+@import "mod_video";
+@import "mod_panel";
+@import "mod_switch";
 @import "mod_header";
 @import "mod_slide";
 @import "mod_navigator";

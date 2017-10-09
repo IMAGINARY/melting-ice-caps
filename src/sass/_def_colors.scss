@@ -4,8 +4,13 @@ $color-black-real: #000;
 $color-white: $color-white-real;
 $color-black: $color-black-real;
 
+$color-blue: #629caf;
 $color-blue-dark: #111b3a;
 $color-blue-darker: #0a1125;
+
+$color-orange: #f7b16e;
+$color-green: #76ee67;
+$color-red: #f74f4f;
 
 @mixin neg {
   color: $color-white;

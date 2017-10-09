@@ -8,58 +8,82 @@ block main
     .slideshow-wrapper
       .slideshow(data-slideshow-id='main')
         .slide(data-slide-id='1')
-          .container
-            .row
-              .col-md-12
-                .title
-                  block s1-title
+          .container-fluid
             .row
               .col-md-12
                 .subtitle
                   block s1-authors
             .row
-              .col-md-12
-                block s1-text
+              .col-md-12.col-no-padding
+                .embed-responsive.embed-responsive-half16by9.front-video
+                  video.embed-responsive-item(src='assets/video/tl-hill.mp4', loop)
             .row
-              .col-md-12
-                a.btn.btn-default(href='#2')
-                  block s1-start
+              .col-md-8.col-md-push-2
+                .large.text-center
+                  block s1-text
         .slide(data-slide-id='2')
-          .container
+          .container-fluid
             .row
               .col-md-12
-                .title
+                h1
                   block s2-title
             .row
-              .col-md-12
+              .col-md-6.col-md-push-3
                 block s2-text
+                img.img-responsive(src='assets/img/calving.jpg')
         .slide(data-slide-id='3')
-          .container
+          .container-fluid
             .row
               .col-md-12
-                .title
+                h1
                   block s3-title
             .row
-              .col-md-4
+              .col-md-3.col-md-push-1
+                img.img-responsive(src='assets/img/subglacial-river.jpg')
                 block s3-caption-1
-              .col-md-4
+              .col-md-3.col-md-push-1
+                img.img-responsive(src='assets/img/snow-covered-surface.jpg')
                 block s3-caption-2
-              .col-md-4
+              .col-md-4.col-md-push-1
                 block s3-text
         .slide(data-slide-id='4')
-          .container
+          .container-fluid
             .row
               .col-md-12
-                .title
+                h1
                   block s4-title
             .row
-              .col-md-4.col-md-push-8
-                .panel.switch-panel
-                  .title
+              .col-md-6
+                .switch-display(data-option-show='default')
+                  img.img-responsive(src='assets/img/physical-processes-inside.jpg')
+                .switch-display(data-option-show='2')
+                  img.img-responsive(src='assets/img/physical-processes-base.jpg')
+                .switch-display(data-option-show='3')
+                  img.img-responsive(src=localImage('physical-processes-surface.jpg'))
+                .switch-display(data-option-show='4')
+                  img.img-responsive(src='assets/img/physical-processes-sea.jpg')
+              .col-md-4
+                .row
+                  .col-md-12
+                    .switch-display(data-option-show='default')
+                      .panel
+                        block s4-switch-text-1
+                    .switch-display(data-option-show='2')
+                      .panel
+                        block s4-switch-text-2
+                    .switch-display(data-option-show='3')
+                      .panel
+                        block s4-switch-text-3
+                    .switch-display(data-option-show='4')
+                      .panel
+                        block s4-switch-text-4
+              .col-md-2
+                .switch-group
+                  h2.title
                     block s4-switch-title
                   ul.options
                     li
-                      button(data-option='1')
+                      button(data-option='default')
                         block s4-switch-option-1
                     li
                       button(data-option='2')
@@ -70,47 +94,24 @@ block main
                     li
                       button(data-option='4')
                         block s4-switch-option-4
-                .switch-display(data-option-show='1')
-                  .panel
-                    block s4-switch-text-1
-                .switch-display(data-option-show='2')
-                  .panel
-                    block s4-switch-text-2
-                .switch-display(data-option-show='3')
-                  .panel
-                    block s4-switch-text-3
-                .switch-display(data-option-show='4')
-                  .panel
-                    block s4-switch-text-4
         .slide(data-slide-id='5')
-          .container
+          .container-fluid
             .row
               .col-md-12
-                .title
+                h1
                   block s5-title
             .row
-              .col-md-4
-                | Images
-              .col-md-4
-                | Images
-              .col-md-4
-                .panel.switch-panel
-                  .title
-                    block s5-switch-title
-                  ul.options
-                    li
-                      button(data-option='1')
-                        block s5-switch-option-1
-                    li
-                      button(data-option='2')
-                        block s5-switch-option-2
-                    li
-                      button(data-option='3')
-                        block s5-switch-option-3
-                    li
-                      button(data-option='4')
-                        block s5-switch-option-4
-                .switch-display(data-option-show='1')
+              .col-md-5.vpull-over-title
+                .switch-display(data-option-show='default')
+                  img.img-responsive(src=localImage('model-inside.png'))
+                .switch-display(data-option-show='2')
+                  img.img-responsive(src=localImage('model-base.png'))
+                .switch-display(data-option-show='3')
+                  img.img-responsive(src=localImage('model-surface.png'))
+                .switch-display(data-option-show='4')
+                  img.img-responsive(src=localImage('model-sea.png'))
+              .col-md-5
+                .switch-display(data-option-show='default')
                   .panel
                     block s5-switch-text-1
                 .switch-display(data-option-show='2')
@@ -122,99 +123,136 @@ block main
                 .switch-display(data-option-show='4')
                   .panel
                     block s5-switch-text-4
-        .slide(data-slide-id='6')
-          .container
-            .row
-              .col-md-12
-                .title
-                  block s6-title
-            .row
-              .col-md-6
-                | Image
-              .col-md-6
-                block s6-text
-        .slide(data-slide-id='7')
-          .container
-            .row
-              .col-md-12
-                .title
-                  block s7-title
-            .row
-              .col-md-6
-                | Image
-                block s7-image-caption
-              .col-md-6
-                block s7-text
-        .slide(data-slide-id='8')
-          .container
-            .row
-              .col-md-12
-                .title
-                  block s8-title
-            .row
-              .col-md-12
-                | Image
-                block s8-image-caption
-            .row
-              .col-md-12
-                block s8-text
-        .slide(data-slide-id='9')
-          .container
-            .row
-              .col-md-12
-                .title
-                  block s9-title
-            .row
-              .col-md-12
-                block s9-text
-        .slide(data-slide-id='10')
-          .container
-            .row
-              .col-md-12
-                .title
-                  block s10-title
-            .row
-              .col-md-12
-                block s10-text
-            .row
-              .col-md-12
-                .panel.switch-panel
-                  .title
-                    block s10-switch-title
+              .col-md-2
+                .switch-group
+                  h2.title
+                    block s5-switch-title
                   ul.options
                     li
-                      button(data-option='1')
-                        block s10-switch-option-1
+                      button(data-option='default')
+                        block s5-switch-option-1
                     li
                       button(data-option='2')
-                        block s10-switch-option-2
+                        block s5-switch-option-2
                     li
                       button(data-option='3')
-                        block s10-switch-option-3
+                        block s5-switch-option-3
                     li
                       button(data-option='4')
-                        block s10-switch-option-4
+                        block s5-switch-option-4
+        .slide(data-slide-id='6')
+          .container-fluid
             .row
               .col-md-12
-                .switch-display(data-option-show='1')
-                  block s10-switch-text-f
-                .switch-display(data-option-show='2')
-                  block s10-switch-text-t
-                .switch-display(data-option-show='3')
-                  block s10-switch-text-f
-                .switch-display(data-option-show='4')
-                  block s10-switch-text-f
-        .slide(data-slide-id='credits')
-          .container
-            .row
-              .col-md-6
                 h1
-                  block bibliography-title
-                block bibliography-text
-              .col-md-6
+                  block s6-title
+            .row
+              .col-md-2.col-md-push-3
+                img.img-responsive(src=localImage('computing-dynamics.png'))
+              .col-md-3.col-md-push-4
+                block s6-text
+        .slide(data-slide-id='7')
+          .container-fluid
+            .row
+              .col-md-12
+                h1
+                  block s7-title
+            .row
+              .col-md-4.col-md-push-2
+                img.img-responsive(src='assets/img/greenland-mesh.jpg')
+                small
+                  block s7-image-caption
+              .col-md-4.col-md-push-2
+                .row
+                  .col-md-12
+                    block s7-text
+                .row
+                  .col-md-8
+                    p
+                      | &nbsp;
+                    small
+                      block s7-image-credits
+        .slide(data-slide-id='8')
+          .container-fluid
+            .row
+              .col-md-12
+                h1
+                  block s8-title
+            .row
+              .col-md-5.col-md-push-1
+                img.img-responsive(src='assets/img/vitesse-simule.jpg')
+                block s8-image-caption
+                small
+                  block s8-image-credit
+              .col-md-4.col-md-push-1
+                block s8-text
+        .slide(data-slide-id='9')
+          .container-fluid
+            .row
+              .col-md-12
+                h1
+                  block s9-title
+            .row
+              .col-md-6.col-md-push-3
+                block s9-text
+                .embed-responsive.embed-responsive-16by9
+                  video.embed-responsive-item(
+                    src='assets/video/elmerice_simulation.mp4',
+                    width=1920,
+                    height=1080,
+                    controls
+                    controlsList="nodownload nofullscreen noremoteplayback"
+                  )
+        .slide(data-slide-id='10')
+          .container-fluid
+            .row
+              .col-md-12
+                h1
+                  block s10-title
+            .row
+              .col-md-2.col-md-push-2
+                img.img-responsive(src='assets/img/quiz-l.png')
+              .col-md-4.col-md-push-2
+                block s10-text
+                .switch-group.switch-group-quiz.text-center
+                  h2.title
+                    block s10-switch-title
+                  ul.options(data-option-once)
+                    li
+                      button(data-option='1').switch-group-quiz-wrong
+                        block s10-switch-option-1
+                    li
+                      button(data-option='2').switch-group-quiz-right
+                        block s10-switch-option-2
+                    li
+                      button(data-option='3').switch-group-quiz-wrong
+                        block s10-switch-option-3
+                    li
+                      button(data-option='4').switch-group-quiz-wrong
+                        block s10-switch-option-4
+                .switch-display(data-option-show='1').switch-group-quiz-wrong
+                  block s10-switch-text-f
+                .switch-display(data-option-show='2').switch-group-quiz-right
+                  block s10-switch-text-t
+                .switch-display(data-option-show='3').switch-group-quiz-wrong
+                  block s10-switch-text-f
+                .switch-display(data-option-show='4').switch-group-quiz-wrong
+                  block s10-switch-text-f
+              .col-md-2.col-md-push-2
+                img.img-responsive(src='assets/img/quiz-r.png')
+        .slide(data-slide-id='credits')
+          .container-fluid
+            .row
+              .col-md-4.col-md-push-1
                 h1
                   block credits-title
-                block credits-text
+                small
+                  block credits-text
+              .col-md-4.col-md-push-3
+                h1
+                  block bibliography-title
+                small
+                  block bibliography-text
     .footer
       .navigator
         ul.toc(data-slideshow='main')
@@ -239,4 +277,4 @@ block main
           li
             a(href='#10') 10
           li
-            a(href='#credits') i
+            a(href='#credits') 𝑖

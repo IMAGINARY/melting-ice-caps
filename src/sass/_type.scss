@@ -5,3 +5,39 @@
 @mixin regularFont {
   @include marvelRegular;
 }
+
+$large-text-size: 5vmin;
+$large-line-height: $large-text-size * 1.2;
+
+@mixin largeText {
+  @include headingFont;
+  font-size: $large-text-size;
+  line-height: $large-line-height;
+}
+
+$medium-text-size: 3.2vmin;
+$medium-line-height: $medium-text-size * 1.2;
+
+@mixin mediumText {
+  @include headingFont;
+  font-size: $medium-text-size;
+  line-height: $medium-line-height;
+}
+
+$regular-text-size: 2.5vmin;
+$regular-line-height: $regular-text-size * 1.2;
+
+@mixin regularText {
+  @include regularFont;
+  font-size: $regular-text-size;
+  line-height: $regular-line-height;
+}
+
+$small-text-size: $regular-text-size * 0.85;
+$small-line-height: $small-text-size * 1.2;
+
+@mixin smallText {
+  @include regularFont;
+  font-size: $small-text-size;
+  line-height: $small-line-height;
+}

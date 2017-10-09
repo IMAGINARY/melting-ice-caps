@@ -1,0 +1,41 @@
+.slide {
+  h3 {
+    @include mediumText;
+    margin: 1vmin 0 0;
+  }
+
+  small {
+    h3 {
+      @include regularText;
+    }
+  }
+}
+
+.slideshow-wrapper {
+  transition: top 0.5s, height 0.5s;
+}
+
+body {
+  transition: background-color 0.5s;
+}
+
+.header .title {
+  transition: opacity 0.5s;
+}
+
+.front-video {
+  margin-bottom: 4vh;
+  margin-top: 3vh;
+}
+
+.slide-1, .slide-1-enter {
+  background-color: $color-blue-dark;
+  .header .title {
+
+  }
+}
+
+.slide-1-exit {
+  background-color: $color-blue-darker;
+}
+

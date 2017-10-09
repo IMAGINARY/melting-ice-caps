@@ -44,19 +44,66 @@
 .clearfix {
   *zoom: 1; }
 
+.embed-responsive-half16by9 {
+  padding-bottom: 28.125%; }
+
 body {
   font-family: 'Marvel';
   font-style: normal;
   font-weight: 400;
+  font-size: 2.5vmin;
+  line-height: 3vmin;
   color: #fff;
   color: #fff;
   -webkit-font-smoothing: antialiased !important;
   background-color: #0a1125; }
 
+h1 {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5vmin;
+  line-height: 6vmin;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2vmin 0; }
+
+h2 {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.2vmin;
+  line-height: 3.84vmin; }
+
+.large {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.2vmin;
+  line-height: 3.84vmin; }
+
+small {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.125vmin;
+  line-height: 2.55vmin; }
+
 a {
   color: #fff;
   color: #fff;
   -webkit-font-smoothing: antialiased !important; }
+
+.img-responsive {
+  margin-bottom: 1vmin; }
+
+.subtitle {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 5vmin;
+  line-height: 6vmin;
+  text-align: center; }
 
 .panel {
   background-color: #0a1125;
@@ -66,20 +113,6 @@ a {
   padding: 10px;
   border: 1px solid #fff;
   border-radius: 5px; }
-
-.switch-panel ul.options {
-  margin: 0;
-  padding: 0; }
-  .switch-panel ul.options li {
-    display: block;
-    list-style: none;
-    padding: 0;
-    margin: 0 0 4px 0; }
-    .switch-panel ul.options li button {
-      display: block;
-      width: 100%;
-      background-color: transparent;
-      border: 1px solid #fff; }
 
 html, body, #main {
   width: 100%;
@@ -112,12 +145,97 @@ html, body, #main {
   bottom: 0;
   left: 0; }
 
+.vpull-over-title {
+  margin-top: -6vmin; }
+
+.col-no-padding {
+  padding: 0; }
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none; }
+
+video::-internal-media-controls-download-button {
+  display: none; }
+
+video::-webkit-media-controls-mute-button {
+  display: none; }
+
+video::-webkit-media-controls-toggle-closed-captions-button {
+  display: none; }
+
+video::-webkit-media-controls-volume-slider {
+  display: none; }
+
+.panel {
+  background-color: transparent;
+  color: #fff;
+  border-color: #629caf;
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.125vmin;
+  line-height: 2.55vmin; }
+  .panel h2 {
+    text-transform: uppercase;
+    margin-top: 0;
+    color: #629caf; }
+  .panel p {
+    margin: 0; }
+
+.switch-group .title {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.2vmin;
+  line-height: 3.84vmin;
+  text-transform: uppercase;
+  margin-top: 0; }
+
+.switch-group ul.options {
+  margin: 0;
+  padding: 0;
+  display: inline-block; }
+  .switch-group ul.options li {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 4px 0; }
+    .switch-group ul.options li button {
+      display: block;
+      width: 100%;
+      background-color: rgba(247, 177, 110, 0.4);
+      border: none;
+      text-align: left;
+      padding-left: 1em;
+      padding-right: 1em;
+      border-radius: 5px;
+      color: #0a1125; }
+      .switch-group ul.options li button:focus {
+        outline: none; }
+      .switch-group ul.options li button.active {
+        background-color: rgba(247, 177, 110, 0.85); }
+
+.switch-group-quiz ul.options li button {
+  background-color: rgba(255, 255, 255, 0.4); }
+
+.switch-group-quiz ul.options li button.switch-group-quiz-right.active {
+  background-color: rgba(118, 238, 103, 0.85); }
+
+.switch-group-quiz ul.options li button.switch-group-quiz-wrong.active {
+  background-color: rgba(247, 79, 79, 0.85); }
+
+.switch-display.switch-group-quiz-right .title, .switch-display.switch-group-quiz-right h2 {
+  color: #76ee67; }
+
+.switch-display.switch-group-quiz-wrong .title, .switch-display.switch-group-quiz-wrong h2 {
+  color: #f74f4f; }
+
 .header .title {
   font-family: 'Marvel';
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 6vh;
+  font-size: 8vh;
   line-height: 10vh;
   text-align: center; }
 
@@ -136,6 +254,15 @@ html, body, #main {
     position: relative;
     display: inline-block;
     white-space: normal; }
+    .slideshow .slide .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-position: left center;
+      background-repeat: no-repeat; }
 
 .switch-display {
   display: none; }
@@ -180,13 +307,47 @@ html, body, #main {
     display: none;
     transition: left 0.5s, top 0.5s;
     position: absolute;
-    width: 9vh;
-    height: 9vh;
+    width: 8vh;
+    height: 8vh;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    margin-left: -1.5vh;
-    margin-top: -1.5vh; }
+    margin-left: -1vh;
+    margin-top: -1vh; }
     .navigator .toc-marker.visible {
       display: block; }
+
+.slide h3 {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.2vmin;
+  line-height: 3.84vmin;
+  margin: 1vmin 0 0; }
+
+.slide small h3 {
+  font-family: 'Marvel';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5vmin;
+  line-height: 3vmin; }
+
+.slideshow-wrapper {
+  transition: top 0.5s, height 0.5s; }
+
+body {
+  transition: background-color 0.5s; }
+
+.header .title {
+  transition: opacity 0.5s; }
+
+.front-video {
+  margin-bottom: 4vh;
+  margin-top: 3vh; }
+
+.slide-1, .slide-1-enter {
+  background-color: #111b3a; }
+
+.slide-1-exit {
+  background-color: #0a1125; }
 
 /*# sourceMappingURL=default.css.map */
