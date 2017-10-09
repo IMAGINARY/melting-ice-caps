@@ -14,12 +14,13 @@
     top: 0;
     left: 0;
     display: block;
-    transition: opacity 1s;
+    transition: opacity 0.5s;
     opacity: 0;
     z-index: 1;
 
     &.active {
       opacity: 1;
+      transition: opacity 1s;
       z-index: 100;
     }
 
