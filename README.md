@@ -3,6 +3,13 @@
 This is an adaptation of the [Simulating the Melting of Ice Caps](https://imaginary.org/program/simulating-the-melting-of-ice-caps) 
 application by Maëlle Nodet (University Grenoble Alpes) and Jocelyne Erhel (Inria) for use in IMAGINARY exhibitions.
 
+## Configuration
+
+Configure the system by editing the cfg/config.yml file. There are important settings for running the exhibit 
+in kiosk mode.
+
+The configuration file is fully commented.
+
 ## Credits
 
 Concept, content and original version by Maëlle Nodet (University Grenoble Alpes) and Jocelyne Erhel (Inria)

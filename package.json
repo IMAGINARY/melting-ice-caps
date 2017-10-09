@@ -10,7 +10,11 @@
   "engines": {
     "node": "^4.8.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "superagent": "^3.5.2",
+    "js-yaml": "^3.8.4"
+  },
   "devDependencies": {
     "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",

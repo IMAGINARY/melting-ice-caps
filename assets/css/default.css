@@ -44,6 +44,20 @@
 .clearfix {
   *zoom: 1; }
 
+body.lock-position {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: fixed; }
+
+.disable-select {
+  -webkit-touch-callout: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+
 .embed-responsive-half16by9 {
   padding-bottom: 28.125%; }
 

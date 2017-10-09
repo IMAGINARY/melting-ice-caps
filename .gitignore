@@ -3,3 +3,4 @@ node_modules
 assets/video/*
 !assets/video/.gitkeep
 
+yarn-error.log
