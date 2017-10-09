@@ -3,7 +3,7 @@ const Promise = require('bluebird');
 const superagent = require('superagent');
 const yaml = require('js-yaml');
 
-const SlideTransitionDelay = 500;
+const SlideTransitionDelay = 1000;
 
 function readConfig() {
   console.log('Reading config');
@@ -187,7 +187,9 @@ function init(cfg) {
           setTimeout((enteredSlide) => {
             $(enteredSlide).trigger('slideEntered');
           }, SlideTransitionDelay, slide);
-          $(slideshow).css({ marginLeft: -1 * $(slide).position().left });
+          $('.slide.active').removeClass('active');
+          $(slide).addClass('active');
+          // $(slideshow).css({ marginLeft: -1 * $(slide).position().left });
         });
       });
       // Default route
