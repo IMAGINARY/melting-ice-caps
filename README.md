@@ -10,6 +10,17 @@ application by Maëlle Nodet (University Grenoble Alpes) and Jocelyne Erhel (Inr
 Currently this app only supports 16:9 screens (e.g. 1920x1080) and nearby aspect ratios. Layout will break at
 other aspect ratios and small resolutions. Hopefully they will be eventually supported. 
 
+## Installation
+
+Run 
+
+```
+./download_video.sh
+```
+
+To download the video files and create a local copy. Afterwards you can configure the cfg/config.yml file to use
+the local copy.
+
 ## Configuration
 
 Configure the system by editing the cfg/config.yml file. There are important settings for running the exhibit 
