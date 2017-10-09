@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="Simulating the Melting of Ice Caps">
+    <meta property="og:url" content="http://imaginary.github.io/melting-ice-caps/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Simulating the Melting of Ice Caps">
+    <link rel="icon" type="image/ico" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" media="all" type="text/css">
+    <link rel="stylesheet" href="assets/css/default.css?v=0" media="screen" type="text/css">
+    <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="vendor/routie/routie.min.js"></script>
+    <script type="text/javascript" src="assets/js/bundle.min.js"></script>
+    <title>Simuler la fonte des calottes polaires
+    </title>
+  </head>
+  <body>
+    <div id="main">
+      <div class="header">
+        <div class="title">Simuler la fonte des calottes polaires
+        </div>
+      </div>
+      <div class="slideshow-wrapper">
+        <div class="slideshow" data-slideshow-id="main">
+          <div class="slide" data-slide-id="1">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="subtitle">Maëlle Nodet et Jocelyne Erhel
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 col-no-padding">
+                  <div class="embed-responsive embed-responsive-half16by9 front-video">
+                    <video class="embed-responsive-item" src="assets/video/tl-hill.mp4" loop></video>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 col-md-push-2">
+                  <div class="large text-center">
+                    <p>
+                      Le niveau des mers monte, pour différentes raisons liées au réchauffement climatique. Les glaciers
+                      de l’Antarctique et du Groenland, qu’on appelle calottes polaires ou inlandsis, jouent un rôle majeur
+                      dans l'évolution du niveau des mers. Peut-on prévoir l’évolution future de ces calottes polaires et en
+                      particulier le vêlage d’icebergs dans l’océan?
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="2">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Contribution à la montée du niveau des mers
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-push-3">
+                  <p>
+                    La contribution des calottes polaires à la montée du niveau des mers est essentiellement la combinaison de
+                    trois phénomènes : la modification en surface des précipitations neigeuses et de la fonte de glace, à cause
+                    du changement climatique et du changement d’altitude du glacier. L’amincissement des plates-formes flottantes,
+                    qui fondent par en-dessous à cause du réchauffement de l’océan. La décharge de glace dans l’océan, lorsque
+                    la glace s’écoule vers la mer puis se brise en larguant des icebergs.
+                    
+                  </p><img class="img-responsive" src="assets/img/calving.jpg">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="3">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Modélisation et simulation
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3 col-md-push-1"><img class="img-responsive" src="assets/img/subglacial-river.jpg">
+                  Rivière sous-glaciaire gelée en hiver<br>
+                  Photo : Yves Chaux
+                </div>
+                <div class="col-md-3 col-md-push-1"><img class="img-responsive" src="assets/img/snow-covered-surface.jpg">
+                  Surface enneigée d’un glacier<br>
+                  Photo : Yves Chaux
+                </div>
+                <div class="col-md-4 col-md-push-1">
+                  <p>
+                    Les processus physiques dans une calotte glaciaire, à l’intérieur comme en surface, sont étudiés par
+                    des glaciologues, en collaboration avec des climatologues, océanologues, mathématiciens et informaticiens.
+                    Un modèle numérique, basé sur des équations mathématiques, permet de simuler l'évolution des calottes
+                    polaires, notamment le vêlage d'icebergs. Des algorithmes résolvent les équations et sont mis en œuvre
+                    dans des logiciels informatiques.
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="4">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Processus physiques en jeu dans un inlandsis
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="switch-display" data-option-show="default"><img class="img-responsive" src="assets/img/physical-processes-inside.jpg"></div>
+                  <div class="switch-display" data-option-show="2"><img class="img-responsive" src="assets/img/physical-processes-base.jpg"></div>
+                  <div class="switch-display" data-option-show="3"><img class="img-responsive" src="assets/img/fr/physical-processes-surface.jpg"></div>
+                  <div class="switch-display" data-option-show="4"><img class="img-responsive" src="assets/img/physical-processes-sea.jpg"></div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="switch-display" data-option-show="default">
+                        <div class="panel">
+                          <h2>À l'intérieur</h2>
+                          <p>
+                            La glace est un fluide qui s’écoule sous l’effet de son propre poids. Elle coule beaucoup plus lentement que
+                            l’eau liquide, car ses caractéristiques sont différentes. En particulier, la glace est un fluide plastique,
+                            c’est-à-dire qu’elle se déforme en s’écoulant. Les propriétés physiques et mécaniques de la glace changent
+                            avec la pression et la température. Or la pression augmente avec la profondeur à cause du poids de la glace
+                            et la température, très froide en surface, augmente aussi avec la profondeur. Par conséquent, la vitesse du
+                            glacier varie en intensité et en direction à l’intérieur de la calotte polaire.
+                            
+                          </p>
+                        </div>
+                      </div>
+                      <div class="switch-display" data-option-show="2">
+                        <div class="panel">
+                          <h2>À la base</h2>
+                          <p>
+                            À la base, lorsque la glace est froide, elle adhère au socle rocheux et des forces de friction diminuent
+                            la vitesse. La température à la base comme à l’intérieur augmente avec le flux géothermique, qui est la
+                            chaleur apportée par la croûte terrestre. Lorsque la glace est à son point de fusion, 0°C, un film d’eau
+                            permet le glissement et augmente la vitesse. En Antarctique et au Groenland, les zones de plus fort
+                            glissement sont situées sur les côtes, dans des vallées ressemblant à des canyons ou à des fjords.
+                          </p>
+                          <p>
+                            Ces fleuves de glace, appelés glaciers émissaires, ont des vitesses spectaculaires, supérieures à 10km/an.
+                            
+                          </p>
+                        </div>
+                      </div>
+                      <div class="switch-display" data-option-show="3">
+                        <div class="panel">
+                          <h2>En surface</h2>
+                          <p>
+                            En surface, de la glace s’ajoute à la glace existante à cause des précipitations et du regel de l’eau :
+                            c’est l’accumulation. Au contraire, de la glace disparaît, à cause de la fonte ou du vent : c’est
+                            l’ablation. Les conditions météorologiques et la température à la surface de la calotte influent sur la
+                            quantité de précipitations neigeuses, ainsi que sur la fonte et sur le transport par le vent, donc sur
+                            l’accumulation et l’ablation et par conséquent sur l’altitude du glacier. Lorsque la température de surface
+                            augmente à cause du réchauffement climatique, la glace fond et l’altitude diminue par ablation. Mais la
+                            température augmente lorsque l’altitude diminue, donc le glacier continue de fondre et de s’amincir. Le
+                            phénomène peut ainsi s'amplifier et la calotte disparaître rapidement.
+                          </p>
+                          <p>
+                            Cette instabilité des petites calottes est un exemple de rétroaction, où une cause produit un effet qui
+                            agit en retour sur cette cause.
+                            
+                          </p>
+                        </div>
+                      </div>
+                      <div class="switch-display" data-option-show="4">
+                        <div class="panel">
+                          <h2>Au niveau de la mer</h2>
+                          <p>
+                            Les glaciers émissaires qui s’écoulent très rapidement perdent de grandes quantités de glace sous la forme
+                            d’icebergs et contribuent ainsi au changement du niveau des mers. Les plates-formes de glace flottante
+                            prolongent les calottes sur l’océan. Lorsque les eaux océaniques se réchauffent, ces plates-formes fondent
+                            par la base et modifient le niveau de l’océan.
+                          </p>
+                          <p>
+                            Ce changement du niveau des mers influe à son tour sur la vitesse du glacier : on observe une rétroaction
+                            entre les différents processus physiques. En effet, le changement du niveau de la mer modifie la ligne
+                            d’échouage, là où la calotte se met à flotter. La géométrie de la plate-forme flottante et par voie de
+                            conséquence l’écoulement de glace sont modifiés.
+                            
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="switch-group">
+                    <h2 class="title">Sélectionner une zone
+                    </h2>
+                    <ul class="options">
+                      <li>
+                        <button data-option="default">À l'intérieur
+                        </button>
+                      </li>
+                      <li>
+                        <button data-option="2">À la base
+                        </button>
+                      </li>
+                      <li>
+                        <button data-option="3">En surface
+                        </button>
+                      </li>
+                      <li>
+                        <button data-option="4">Au niveau de la mer
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="5">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Modèle mathématique
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5 vpull-over-title">
+                  <div class="switch-display" data-option-show="default"><img class="img-responsive" src="assets/img/fr/model-inside.png"></div>
+                  <div class="switch-display" data-option-show="2"><img class="img-responsive" src="assets/img/fr/model-base.png"></div>
+                  <div class="switch-display" data-option-show="3"><img class="img-responsive" src="assets/img/fr/model-surface.png"></div>
+                  <div class="switch-display" data-option-show="4"><img class="img-responsive" src="assets/img/fr/model-sea.png"></div>
+                </div>
+                <div class="col-md-5">
+                  <div class="switch-display" data-option-show="default">
+                    <div class="panel">
+                      <h2>À l'intérieur</h2>
+                      <p>
+                        La glace s’écoule car c’est un fluide. Le modèle met en équations deux lois fondamentales de la physique.
+                        D’une part, la glace est un fluide incompressible, donc un petit glaçon se déforme en gardant le même
+                        volume et la même masse : c’est la loi de conservation de la masse. D’autre part, la glace est en équilibre,
+                        donc la somme des forces qui s’exercent sur un cube de glace est nulle : c’est la loi de conservation de la
+                        quantité de mouvement, ou deuxième loi de Newton, lorsque l’accélération est nulle.
+                      </p>
+                      <p>
+                        Les forces qui s’exercent sur un petit glaçon sont dues à la gravité, à la pression et à la viscosité. Pour
+                        calculer la force de viscosité, il faut définir une relation entre la vitesse de déplacement et les
+                        contraintes mécaniques dues à la plasticité du fluide. Les glaciologues utilisent la loi de Glen, qui fait
+                        intervenir la température et qui modélise les caractéristiques des cristaux de glace.
+                      </p>
+                      <p>
+                        Il faut aussi une équation pour définir la température à l’intérieur : c’est la loi de conservation de
+                        l’énergie, qui prend en compte le flux géothermique et la température de surface. En pratique, on calcule
+                        souvent la température séparément, avec un modèle simplifié.
+                      </p>
+                      <p>
+                        On obtient ainsi un ensemble d’équations, dont les inconnues sont la vitesse du fluide (l’intensité et la
+                        direction) et la pression, partout dans le volume glaciaire. Ce système d’équations s’appelle les équations
+                        de Stokes, qui sont une version simplifiée des fameuses équations de Navier-Stokes, dont la résolution est
+                        mise à prix pour un million de dollars. Ces équations de Stokes décrivent des relations entre les variations
+                        dans chaque direction de l’espace de la vitesse et de la pression : ce sont des équations aux dérivées
+                        partielles.
+                        
+                      </p>
+                    </div>
+                  </div>
+                  <div class="switch-display" data-option-show="2">
+                    <div class="panel">
+                      <h2>À la base</h2>
+                      <p>
+                        Les conditions de frottement et glissement sont complexes et sont souvent modélisées par une loi de
+                        friction (encore une équation avec des dérivées partielles) qui fait intervenir un coefficient de
+                        friction propre au glacier étudié. Ce coefficient varie en espace et est très difficile à mesurer.
+                        
+                      </p>
+                      <p>
+                        De plus, l’altitude du socle peut varier. En effet, le socle rocheux s’enfonce lentement sous le poids
+                        de la glace et remonte lentement lorsque de la glace fond. Il y a une rétroaction entre le bilan de
+                        masse de surface, l’écoulement du glacier et l’altitude du socle. Ce rebond, appelé isostasie, se produit
+                        au bout d’environ 10 000 ans et peut donc être ignoré lorsqu’on étudie l’évolution de l’inlandsis durant
+                        un siècle.
+                        
+                      </p>
+                    </div>
+                  </div>
+                  <div class="switch-display" data-option-show="3">
+                    <div class="panel">
+                      <h2>En surface</h2>
+                      <p>
+                        L’altitude de surface peut augmenter par accumulation ou décroître par ablation. Elle peut aussi varier
+                        à cause du mouvement du glacier. L’équation qui traduit l’évolution au cours du temps de l’altitude de
+                        surface est un bilan de masse de surface. L’accumulation et l’ablation sont calculées grâce à un modèle
+                        climatique, tandis que le changement dû au mouvement est calculé avec la vitesse de surface du glacier.
+                        
+                      </p>
+                      <p>
+                        Le bilan de masse de surface est encore une équation aux dérivées partielles, avec non seulement des
+                        variations dans l’espace de l’altitude mais aussi une variation dans le temps.
+                        
+                      </p>
+                    </div>
+                  </div>
+                  <div class="switch-display" data-option-show="4">
+                    <div class="panel">
+                      <h2>Au niveau de la mer</h2>
+                      <p>
+                        La ligne d’échouage correspond à l’endroit où la calotte polaire se met à flotter sur l’océan. La
+                        plate-forme flottante est soumise en plus à la poussée d’Archimède exercée par l’eau. Une équation
+                        traduit l’équilibre des forces pour la frontière entre la calotte polaire et l’océan, en tenant compte
+                        de la différence des masses volumiques entre la glace et l’eau.
+                        
+                      </p>
+                      <p>
+                        Une équation porte aussi sur les autres frontières de la calotte polaire pour compléter le système.
+                        
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="switch-group">
+                    <h2 class="title">Sélectionner une zone
+                    </h2>
+                    <ul class="options">
+                      <li>
+                        <button data-option="default">À l'intérieur
+                        </button>
+                      </li>
+                      <li>
+                        <button data-option="2">À la base
+                        </button>
+                      </li>
+                      <li>
+                        <button data-option="3">En surface
+                        </button>
+                      </li>
+                      <li>
+                        <button data-option="4">Au niveau de la mer
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="6">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Calcul de l’évolution d’un glacier
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-2 col-md-push-3"><img class="img-responsive" src="assets/img/fr/computing-dynamics.png"></div>
+                <div class="col-md-3 col-md-push-4">
+                  <p>
+                    Pour déterminer l’évolution d’un glacier, il faut calculer l’altitude à des instants réguliers, par exemple
+                    tous les ans. Pour cela, il faut actualiser le Bilan de Masse de Surface (BMS), qui dépend de la vitesse et
+                    des conditions météorologiques. Il faut aussi recalculer la vitesse du glacier, qui dépend de l’altitude.
+                    
+                  </p>
+                  <p>
+                    Connaissant grâce à des mesures l’altitude de surface pour l'année 0, on calcule la vitesse pour l'année 0,
+                    grâce aux équations de Stokes. On peut alors calculer le Bilan de Masse de Surface pour l’année 0 et on en
+                    déduit l’altitude de surface pour l’année 1.
+                    
+                  </p>
+                  <p>
+                    On calcule alors la vitesse pour l’année 1, puis le Bilan de Masse de Surface, puis l’altitude de surface pour
+                    l’année 2, etc.
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="7">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Calcul de la vitesse d'un glacier
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-md-push-2"><img class="img-responsive" src="assets/img/greenland-mesh.jpg"><small>
+                    <p>
+                      Maillage du Groenland et vitesse simulée. Il y a plus de triangles dans les zones des glaciers émissaires
+                      pour calculer précisément les variations rapides de la vitesse.
+                      
+                    </p></small></div>
+                <div class="col-md-4 col-md-push-2">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p>
+                        Connaissant l’altitude de surface pour l'année n, on calcule la vitesse pour l'année n, en résolvant les
+                        équations aux dérivées partielles de Stokes.
+                        
+                      </p>
+                      <p>
+                        La première étape est de passer des inconnues définies partout à des inconnues définies par un nombre fini
+                        de valeurs. Cette étape s’appelle une discrétisation spatiale. Pour cela, la surface du glacier est découpée
+                        en petits triangles, et l’épaisseur du glacier en tranches, ce qui aboutit à un découpage du volume glaciaire
+                        en petits glaçons ayant une forme de prisme, qu'on appelle des mailles.
+                        
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <p>&nbsp;</p><small>
+                        <p>
+                          Image d'après Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger,
+                          T., Greve, R., and Vaughan, D. G.: Greenland ice sheet contribution to sea-level rise from a new-generation
+                          ice-sheet model, The Cryosphere, 6, 1561-1576, 2012. Licence CC-BY 3.0.
+                          
+                        </p></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="8">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Résolution des équations de stokes
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5 col-md-push-1"><img class="img-responsive" src="assets/img/vitesse-simule.jpg">
+                  <p>
+                    Vitesse simulée en 3D de la calotte polaire du Groenland. Les glaciers émissaires vont nettement plus vite
+                    (en rouge, 12 km par an) que les autres parties (en bleu, 1 m par an)
+                    
+                  </p><small>
+                    <p>
+                      Image: Fabien Gillet-Chaulet, CNRS & LGGE, Grenoble.
+                      
+                    </p></small>
+                </div>
+                <div class="col-md-4 col-md-push-1">
+                  <p>
+                    Ensuite, les équations de Stokes sont transformées en un système d’équations algébriques (sans dérivée)
+                    compliquées, avec autant d’équations que d’inconnues. On ne sait pas résoudre de façon exacte un tel
+                    système, alors on utilise un algorithme itératif, qui procède par approximations successives. On contrôle
+                    mathématiquement l’erreur et on arrête l’algorithme lorsque celle-ci est assez petite.
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="9">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Quel avenir pour le groenland ?
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-push-3">
+                  <p>
+                    Un code informatique permet de simuler l’évolution de l’inlandsis, en appliquant des conditions météo à la
+                    surface, fournies par exemple par les modèles climatiques du GIEC. Ces données météo dépendent du scénario
+                    socio-économique choisi.
+                    
+                  </p>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" src="assets/video/elmerice_simulation.mp4" width="1920" height="1080" controls controlsList="nodownload nofullscreen noremoteplayback"></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="10">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>Quiz
+                  </h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-2 col-md-push-2"><img class="img-responsive" src="assets/img/quiz-l.png"></div>
+                <div class="col-md-4 col-md-push-2">
+                  <p>
+                    Pour simuler le mouvement d'un glacier, on réalise un maillage en découpant le volume en petits glaçons.
+                    Que se passe-t-il quand on diminue le nombre de glaçons ?
+                    
+                  </p>
+                  <div class="switch-group switch-group-quiz text-center">
+                    <h2 class="title">
+                    </h2>
+                    <ul class="options" data-option-once>
+                      <li>
+                        <button class="switch-group-quiz-wrong" data-option="1">1. Le calcul est plus rapide et plus précis
+                        </button>
+                      </li>
+                      <li>
+                        <button class="switch-group-quiz-right" data-option="2">2. Le calcul est plus rapide et moins précis
+                        </button>
+                      </li>
+                      <li>
+                        <button class="switch-group-quiz-wrong" data-option="3">3. Le calcul est moins rapide et plus précis
+                        </button>
+                      </li>
+                      <li>
+                        <button class="switch-group-quiz-wrong" data-option="4">4. Le calcul est moins rapide et moins précis
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="switch-display switch-group-quiz-wrong" data-option-show="1">
+                    <h2>Non, la bonne réponse est la 2</h2>
+                    <p>
+                      Pour calculer la vitesse et l’altitude avec une bonne précision, il faut beaucoup de mailles, surtout dans
+                      les zones de forte vitesse. Mais le nombre d’équations augmente avec le nombre de mailles et le temps de
+                      calcul augmente avec le nombre d’équations. Comme dans la plupart des simulations numériques, il faut
+                      trouver un compromis entre la précision du résultat et le temps de calcul.
+                      
+                    </p>
+                  </div>
+                  <div class="switch-display switch-group-quiz-right" data-option-show="2">
+                    <h2>Bravo !</h2>
+                    <p>
+                      Pour calculer la vitesse et l’altitude avec une bonne précision, il faut beaucoup de mailles, surtout dans
+                      les zones de forte vitesse. Mais le nombre d’équations augmente avec le nombre de mailles et le temps de
+                      calcul augmente avec le nombre d’équations. Comme dans la plupart des simulations numériques, il faut
+                      trouver un compromis entre la précision du résultat et le temps de calcul.
+                      
+                    </p>
+                  </div>
+                  <div class="switch-display switch-group-quiz-wrong" data-option-show="3">
+                    <h2>Non, la bonne réponse est la 2</h2>
+                    <p>
+                      Pour calculer la vitesse et l’altitude avec une bonne précision, il faut beaucoup de mailles, surtout dans
+                      les zones de forte vitesse. Mais le nombre d’équations augmente avec le nombre de mailles et le temps de
+                      calcul augmente avec le nombre d’équations. Comme dans la plupart des simulations numériques, il faut
+                      trouver un compromis entre la précision du résultat et le temps de calcul.
+                      
+                    </p>
+                  </div>
+                  <div class="switch-display switch-group-quiz-wrong" data-option-show="4">
+                    <h2>Non, la bonne réponse est la 2</h2>
+                    <p>
+                      Pour calculer la vitesse et l’altitude avec une bonne précision, il faut beaucoup de mailles, surtout dans
+                      les zones de forte vitesse. Mais le nombre d’équations augmente avec le nombre de mailles et le temps de
+                      calcul augmente avec le nombre d’équations. Comme dans la plupart des simulations numériques, il faut
+                      trouver un compromis entre la précision du résultat et le temps de calcul.
+                      
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-2 col-md-push-2"><img class="img-responsive" src="assets/img/quiz-r.png"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide" data-slide-id="credits">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4 col-md-push-1">
+                  <h1>Crédits
+                  </h1><small>
+                    <h3>Auteurs:</h3>
+                    <p>
+                      Maëlle Nodet (Université Grenoble Alpes)<br>
+                      Jocelyne Erhel (Inria)
+                    </p>
+                    <h3>Conception / Production:</h3>
+                    <p>
+                      Interstices<br>
+                      IMAGINARY (www.imaginary.org)
+                    </p>
+                    <h3>Graphisme:</h3>
+                    <p>Victoria Denys</p>
+                    <h3>Images:</h3>
+                    <p>
+                      Yves Chaux (p. 3);<br>
+                      d'après Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger, T., Greve, R.,
+                      and Vaughan, D. G. (p. 7) ;<br>
+                      Fabien Gillet-Chaulet, CNRS & LGGE, Grenoble (p. 8)
+                    </p>
+                    <h3>Vidéos:</h3>
+                    <p>
+                      www.CHASINGICE.com (p. 2) ;<br>
+                      eSTICC Elmer ICE, Simulation Fabien Gillet-Chaulet LGGE, Grenoble, Visualisation Jyrki Hokkanen CST-IT Center For
+                      Science (p. 9)
+                    </p>
+                    <p>Ce document est diffusé sous licence Creative Commons BY-NC-SA.</p></small>
+                </div>
+                <div class="col-md-4 col-md-push-3">
+                  <h1>Bibliographie
+                  </h1><small>
+                    <p>
+                      Maëlle Nodet, Jocelyne Erhel. Modéliser et simuler la fonte des calottes polaires, Interstices, 2015.
+                      
+                    </p>
+                    <p>
+                      Maëlle Nodet, Jocelyne Erhel. Des outils mathématiques pour prévoir la fonte des calottes polaires, Interstices,
+                      2015.
+                      
+                    </p>
+                    <p>
+                      Maëlle Nodet. De la glace à la mer. Matapli, SMAI, 2013.
+                      
+                    </p>
+                    <p>
+                      Guillaume Jouvet. L'évolution des glaciers, modélisation et prédiction. Accromath, Vol 8.2, 2013.
+                      
+                    </p>
+                    <p>
+                      Guillaume Jouvet. The future of glaciers, Imaginary, 2013
+                      
+                    </p>
+                    <p>
+                      Fabien Gillet-Chaulet. Elmer/Ice, un modèle de calotte polaire de nouvelle génération. Journée Mésochallenge
+                      Equip@meso, 2013.
+                      
+                    </p>
+                    <p>
+                      Catherine Ritz, Tamsin L. Edwards, Gaël Durand, Antony J. Payne, Vincent Peyaud & Richard C. A. Hindmarsh:
+                      Potential sea-level rise from Antarctic ice-sheet instability constrained by observations, Nature, 528, 115-118,
+                      2015.
+                      
+                    </p>
+                    <p>
+                      Gillet-Chaulet, F., Gagliardini, O., Seddik, H., Nodet, M., Durand, G., Ritz, C., Zwinger, T., Greve, R., and
+                      Vaughan, D. G.: Greenland ice sheet contribution to sea-level rise from a new-generation ice-sheet model, The
+                      Cryosphere, 6, 1561-1576, 2012.
+                      
+                    </p></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="navigator">
+          <ul class="toc" data-slideshow="main">
+            <li><a href="#1">1</a></li>
+            <li><a href="#2">2</a></li>
+            <li><a href="#3">3</a></li>
+            <li><a href="#4">4</a></li>
+            <li><a href="#5">5</a></li>
+            <li><a href="#6">6</a></li>
+            <li><a href="#7">7</a></li>
+            <li><a href="#8">8</a></li>
+            <li><a href="#9">9</a></li>
+            <li><a href="#10">10</a></li>
+            <li><a href="#credits">𝑖</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
