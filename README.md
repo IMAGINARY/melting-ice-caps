@@ -3,6 +3,13 @@
 This is an adaptation of the [Simulating the Melting of Ice Caps](https://imaginary.org/program/simulating-the-melting-of-ice-caps) 
 application by Maëlle Nodet (University Grenoble Alpes) and Jocelyne Erhel (Inria) for use in IMAGINARY exhibitions.
 
+## Limitations
+
+**IMPORTANT**:
+
+Currently this app only supports 16:9 screens (e.g. 1920x1080) and nearby aspect ratios. Layout will break at
+other aspect ratios and small resolutions. Hopefully they will be eventually supported. 
+
 ## Configuration
 
 Configure the system by editing the cfg/config.yml file. There are important settings for running the exhibit 
