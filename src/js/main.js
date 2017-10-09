@@ -42,15 +42,13 @@ $(() => {
   /**
    * Install toggler controls
    */
+  function showOption(slide, optionID) {
+    $(slide).find('[data-option]').removeClass('active');
+    $(slide).find('[data-option-show]').removeClass('active');
+    $(slide).find(`[data-option=${optionID}]`).addClass('active');
+    $(slide).find(`[data-option-show=${optionID}]`).addClass('active');
+  }
   $('.slide:has([data-option])').each((iSlide, slide) => {
-
-    function showOption(slide, optionID) {
-      $(slide).find('[data-option]').removeClass('active');
-      $(slide).find('[data-option-show]').removeClass('active');
-      $(slide).find(`[data-option=${optionID}]`).addClass('active');
-      $(slide).find(`[data-option-show=${optionID}]`).addClass('active');
-    }
-
     let once = false;
     $(slide).find('[data-option]').each((iOption, option) => {
       $(option).on('click', (ev) => {
@@ -76,6 +74,29 @@ $(() => {
   });
 
   /**
+   * Set body classes
+   */
+  $('.slide[data-slide-id]')
+    .on('slideEnter', (ev) => {
+      const slideId = $(ev.target).attr('data-slide-id');
+      $(document.body).addClass(`slide-${slideId}-enter`);
+    })
+    .on('slideEntered', (ev) => {
+      const slideId = $(ev.target).attr('data-slide-id');
+      $(document.body).removeClass(`slide-${slideId}-enter`);
+      $(document.body).addClass(`slide-${slideId}`);
+    })
+    .on('slideExit', (ev) => {
+      const slideId = $(ev.target).attr('data-slide-id');
+      $(document.body).addClass(`slide-${slideId}-exit`);
+    })
+    .on('slideExited', (ev) => {
+      const slideId = $(ev.target).attr('data-slide-id');
+      $(document.body).removeClass(`slide-${slideId}-exit`);
+      $(document.body).removeClass(`slide-${slideId}`);
+    });
+
+  /**
    * Add a position marker in the TOC
    */
   $('.slideshow').each((iSlideshow, slideshow) => {
@@ -94,6 +115,41 @@ $(() => {
           });
         } else {
           $(tocMarker).removeClass('visible');
+        }
+      });
+    });
+  });
+
+  /**
+   * Autoplay / Autostop videos
+   */
+
+  $('.slide:has(video)').each((iSlide, slide) => {
+    let stopRequested = false;
+    let playing = false;
+
+    $(slide).on('slideEntered', (e) => {
+      $(e.target).find('video').each((iVideo, video) => {
+        video.play().then(() => {
+          if (stopRequested) {
+            video.pause();
+            video.currentTime = 0; // eslint-disable-line
+            stopRequested = false;
+          } else {
+            playing = true;
+          }
+        });
+      });
+    });
+
+    $(slide).on('slideExited', (e) => {
+      $(e.target).find('video').each((iVideo, video) => {
+        if (playing) {
+          video.pause();
+          video.currentTime = 0; // eslint-disable-line
+          playing = false;
+        } else {
+          stopRequested = true;
         }
       });
     });
