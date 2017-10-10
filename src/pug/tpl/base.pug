@@ -12,9 +12,15 @@ html
     link(rel="icon", type="image/ico", href="assets/img/favicon.png")
     link(rel='stylesheet', href='vendor/bootstrap/css/bootstrap.min.css', media='all', type='text/css')
     link(rel='stylesheet', href='assets/css/default.css?v=0', media='screen', type='text/css')
+    script.
+      if (typeof module === 'object') { window.module = module; module = undefined; }
+    // jQuery and web libraries BEGIN
     script(type="text/javascript", src="vendor/jquery/jquery-3.2.1.min.js")
     script(type="text/javascript", src="vendor/routie/routie.min.js")
     script(type="text/javascript", src="assets/js/bundle.min.js")
+    // jQuery and web libraries END
+    script.
+      if (window.module) module = window.module;
     title
       block title
     block head
